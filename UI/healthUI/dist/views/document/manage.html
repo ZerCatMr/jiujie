@@ -1,0 +1,158 @@
+<style>
+    .layui-table[lay-skin=line] {
+        border-width: 0 0 0 0 !important;
+        width:100%;
+    }
+</style>
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">                            
+            <div class="layui-form layui-form-pane health-query">                            
+                <div class="layui-form-item">
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">人员类型</label>
+                        <div class="multi-checkbox" hyd-name="worktype">
+                            <div><span hyd-value="0">在职</span></div>
+                            <div><span hyd-value="1">离休</span></div>
+                            <div><span hyd-value="2">退休</span></div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">医疗待遇</label>
+                        <div class="multi-checkbox" hyd-name="medtreat">
+                            <div><span hyd-value="0">省级</span></div>
+                            <div><span hyd-value="1">厅级</span></div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">授权情况</label>
+                        <div class="multi-checkbox" hyd-name="authstatus">
+                            <div><span hyd-value="0">已授权</span></div>
+                            <div><span hyd-value="1">未授权</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">姓名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="personname" placeholder="姓名" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">身份证号</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="personIdenNo" placeholder="身份证号" class="layui-input">
+                            </div>
+                        </div>
+                </div>
+                <br/>
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn" lay-filter="hyd-query" name="doc_queryView">
+                        <i class="layui-icon layui-icon-search">查询</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search"  placeholder="过滤"/>
+            <i class="layui-icon layui-icon-search"></i>
+        </div>
+    </div>
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="documentauthtb" lay-filter="documentauthtb"></table>
+    </div>
+</div>
+<script type="text/html" id="operation">
+    <div class="layui-btn-group">
+        <a lay-event="documentauth" title="授权"><i class="layui-icon layui-icon-auz hyd-icon-operation"></i></a>
+        <a lay-event="viewdocument" title="查看档案"><i class="layui-icon layui-icon-read hyd-icon-operation"></i></a>
+    </div>
+</script>
+
+<!-- 健康档案授权弹出层(针对单份档案) -->
+<script type="text/html" id="manage_auth_doc">
+
+    <div>
+
+        <div class="layui-col-md12">
+            <form class="layui-form layui-form-pane health-query">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">档案人</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="psnCd"  disabled  autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">授权人</label>
+                    <div class="multi-checkbox" name="authNams">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">授权时间</label>
+                    <div class="multi-checkbox" name="authDate">
+                        <div><span hyd-value="0">永久有效</span></div>
+                        <div class="hyd-selected"><span hyd-value="1">限时到期</span></div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">开始时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="startDate"  id="doc_startDate"  autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item" style="visibility:visible" name="manage_endTime">
+                    <label class="layui-form-label ">结束时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="expirtDate"  id="doc_expirtDate" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-layer-btn layui-layer-btn-">
+                        <a href="javascript:void(0)" class="layui-layer-addVisitVisit" id="hyd_auth_sumbit">确定</a>
+                        <a class="layui-layer-btn1" name="hyd_auth_colse">取消</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr/>
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">授权状态</li>
+                <li>授权历史</li>
+            </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <div class="layui-col-md12">
+                    <div class="patrol-table-view health-table-default">
+                        <table class="layui-hide" lay-filter="manage_auth_doc_state" id="manage_auth_doc_state_t"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                <div class="layui-col-md12">
+                    <div class="patrol-table-view health-table-default">
+                        <table class="layui-hide" lay-filter="manage_auth_doc_record" id="manage_auth_doc_record"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</script>
+
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="hyd_doctor_stop">取消授权</a>
+</script>
+
+<script>
+layui.use('document/manage', layui.factory('document/manage'));
+</script>
+
+
+

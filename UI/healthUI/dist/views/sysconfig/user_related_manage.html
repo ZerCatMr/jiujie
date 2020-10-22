@@ -1,0 +1,45 @@
+<!-- 系统管理/参检机构管理-->
+<div class="layui-fluid" id="sysconfig_related_manage">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <div class="layui-form layui-form-pane health-query">
+                <!-- 功能菜单区域-->
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn" lay-filter="hyd-query" name="add">
+                        <i class="layui-icon layui-icon-add-circle">新增关联关系</i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search"  placeholder="过滤"/>
+        </div>
+    </div>
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="userrelatemanage_table" lay-filter="userrelatemanage_table"></table>
+    </div>
+</div>
+
+<!--查看 编辑 停用 启用 按钮-->
+<script type="text/html" id="userrelatemanage_table_bloder">
+    <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="del_related">删除关联</a>
+</script>
+
+<script type="text/html" id="sysconfig_related_manage_layer">
+    <div>
+       新增用户关联关系弹窗
+    </div>
+</script>
+
+
+
+<script>
+    layui.use('sysconfig/user_related_manage', layui.factory('sysconfig/user_related_manage'));
+</script>
+
+
+
+userrelatemanage_table

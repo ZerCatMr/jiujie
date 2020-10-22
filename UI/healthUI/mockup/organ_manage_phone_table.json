@@ -1,0 +1,25 @@
+{
+  "code":0,
+  "message":"ssuccess",
+  "data":[
+    {"id":"test111",
+    "organid":"organTest1",
+    "contact_phone":"13000000000",
+    "contact_posname":"xxx",
+    "contact_position":"xx职位",
+    "status":"1"},
+    {"id":"test222",
+      "organid":"organTest2",
+      "contact_phone":"12000000000",
+      "contact_posname":"xxx",
+      "contact_position":"xx职位",
+      "status":"1"},
+    {"id":"test3333",
+      "organid":"organTest3",
+      "contact_phone":"13000000000",
+      "contact_posname":"xxx",
+      "contact_position":"xx职位",
+      "status":"1"}
+  ]
+
+}

@@ -1,0 +1,265 @@
+<!--巡诊需求管理 -->
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <div class="layui-form layui-form-pane health-query" lay-filter="doctor-base-query">
+                <div class="layui-form-item">
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">姓名</label>
+                        <div class="multi-checkbox">
+                            <input name="nam" class="layui-input" type="text" placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-inline">
+                            <select name="roundState" lay-verify="">
+                                <option value="">请选择</option>
+                                <option value="已生效">已生效</option>
+                                <option value="-已生效">未生效</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">生效日期</label>
+                        <div class="multi-checkbox">
+                            <input name="effecDate" class="layui-input" type="text" id="demand_effecDate">
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="layui-form-item" id="info_item_oper">
+                        <div class="layui-inline pat_toobar">
+                            <button class="layui-btn  mr5" lay-filter="doctorbaseQuery" id="hyd_pat_doctor"  data-type="reload">
+                                <i class="layui-icon">查询</i>
+                            </button>
+                            <button class="layui-btn  mr5" lay-filter="doctorbaseReset">
+                                <i class="layui-icon">重置</i>
+                            </button>
+                            <button class="layui-btn " lay-filter="doctorbaseAdd">
+                                <i class="layui-icon">新增巡诊需求</i>
+                            </button>
+                        </div>
+                </div>
+                </div>
+            </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search" placeholder="过滤"/>
+            <i class="layui-icon layui-icon-search"></i>
+        </div>
+    </div>
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="demandmanag" lay-filter="demandmanag"></table>
+    </div>
+</div>
+<script>
+    layui.use('patrol/pat_demand_manag', layui.factory('patrol/pat_demand_manag'));
+</script>
+
+<!-- 动态表格操作按钮 -->
+<script type="text/html" id="demand_manag_tool">
+    {{#  if(d.roundState == '草稿'){ }}
+    <a class="layui-btn layui-btn-xs" lay-event="takeEffect">生效</a>
+    <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="dell" id="hyd_doctor_start">删除</a>
+    {{#  } }}
+
+    {{#  if(d.roundState == '已生效'){ }}
+    <a class="layui-btn layui-btn-xs" lay-event="show">查看</a>
+    <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="arrangement" id="hyd_doctor_stop">安排</a>
+    {{#  } }}
+</script>
+
+<!-- 添加医生表格中的单选按钮 -->
+<script type="text/html" id="demand_radio_tool">
+    <input type="radio" name="demand_doctor_checkbox">
+</script>
+
+<!--巡诊查看弹窗-->
+<script type="text/html" id="demand_showment">
+    <div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label class="layui-form-label">巡诊对象</label>
+                <div class="layui-input-inline"><input type="text" name="PsnCdNam" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+            <div class="layui-inline"><label class="layui-form-label">性别</label>
+                <div class="layui-input-inline"><input type="text" name="GenderCdNam" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+            <div class="layui-inline"><label class="layui-form-label">生效时间</label>
+                <div class="layui-input-inline"><input type="text" name="EffecDate" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label class="layui-form-label">开始时间</label>
+                <div class="layui-input-inline"><input type="text" name="StartDate" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+            <div class="layui-inline"><label class="layui-form-label">结束时间</label>
+                <div class="layui-input-inline"><input type="text" name="EndDate" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label class="layui-form-label">巡诊描述</label>
+                <div class="layui-input-block"><textarea name="Description" disabled="disabled"
+                                                         class="layui-input" style="width:510px;"
+                                                         rows="8"></textarea></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <button class="layui-btn layui-hide" id="appenddoc-show"><i class="layui-icon"></i>安排巡诊医生</button>
+            </div>
+        </div>
+        <div class="patrol-card layui-card" id="demand-search-show">
+            <div class="patrol-card-header layui-card-header mt-10">详细信息</div>
+        </div>
+        <div class="patrol-table-view health-table-default">
+            <table class="layui-hide" lay-filter="patrolrecord" id="demand_showment_doctor"></table>
+        </div>
+    </div>
+</script>
+
+<!--巡诊安排弹窗 -->
+<script type="text/html" id="demand_arrangement">
+    <div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label class="layui-form-label">巡诊对象</label>
+                <div class="layui-input-inline"><input type="text" name="PsnCdNam" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+            <div class="layui-inline"><label class="layui-form-label">性别</label>
+                <div class="layui-input-inline"><input type="text" name="GenderCdNam" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+            <div class="layui-inline"><label class="layui-form-label">生效时间</label>
+                <div class="layui-input-inline"><input type="text" name="EffecDate" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label class="layui-form-label">开始时间</label>
+                <div class="layui-input-inline"><input type="text" name="StartDate" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+            <div class="layui-inline"><label class="layui-form-label">结束时间</label>
+                <div class="layui-input-inline"><input type="text" name="EndDate" disabled="disabled"
+                                                       autocomplete="off" class="layui-input"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label class="layui-form-label">巡诊描述</label>
+                <div class="layui-input-block"><textarea name="Description" disabled="disabled"
+                                                         class="layui-input" style="width:510px;"
+                                                         rows="8"></textarea></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <button class="layui-btn" id="appenddoc"><i class="layui-icon"></i>安排巡诊医生</button>
+            </div>
+        </div>
+        <div class="patrol-card layui-card" id="demand-search">
+            <div class="patrol-card-header layui-card-header mt-10">详细信息</div>
+        </div>
+        <div class="patrol-table-view health-table-default">
+            <table class="layui-hide" id="patrolrecord" lay-filter="patrolrecord"></table>
+            <div class="layui-form layui-border-box layui-table-view" lay-filter="LAY-table-2"
+                 lay-id="patrolrecord">
+                <div class="layui-table-box">
+                    <div class="layui-table-body layui-table-main health-table-default" style="height: 261px;">
+                        <table cellspacing="0" cellpadding="0" border="0" class="layui-table" id="demand_doctor_table">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!--安排医生弹窗-->
+<script type="text/html" id="demand_arrangment_doctor">
+    <div class="layui-form-item">
+        <div>
+            <div class="layui-form-item">
+                <div class="layui-inline"><label class="layui-form-label required">安排巡诊日期</label>
+                    <div class="layui-input-inline" lay-verify="required"><input type="text" name="RoundPlanDate"
+                                                                                 id="RoundPlanDate"
+                                                                                 class="layui-input"
+                                                                                 placeholder="选择安排日期" readonly=""
+                                                                                 lay-key="2"></div>
+                    <span>*</span></div>
+            </div>
+            <div>
+                <div class="patrol-card layui-card" id="demand-search-doct">
+                    <div class="patrol-card-header layui-card-header mt-10">医生列表
+                        <div class="patrol-search patrol-search-input">
+                            <input type="text" name="doctor-filter" placeholder="搜索" class="patrol-search"
+                                   style="width: 200px;">
+                            <i class="searchico"></i></div>
+                    </div>
+                </div>
+                <div class="patrol-table-view health-table-default">
+                    <table class="layui-hide" id="patrolrecords-doctor" lay-filter="test"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-layer-btn layui-layer-btn-">
+        <a class="layui-layer-btn0" lay-submit lay-filter="alertDoctor">确认</a>
+        <a class="layui-layer-btn1">取消</a>
+    </div>
+    <!--        <div>-->
+    <!--            <button class="layui-btn" lay-submit lay-filter="alertDoctor">提交修改</button>-->
+    <!--            <button class="layui-btn" name="hyd_auth_colse">取消修改</button>-->
+    <!--        </div>-->
+</script>
+
+<!--新增巡诊需求弹窗-->
+<script type="text/html" id="demand_addVisitVisit">
+    <div>
+        <div>
+            <div class="layui-form-item v-pdform">
+                <div class="patrol-card layui-card" id="demand-search-add">
+                    <div class="patrol-card-header layui-card-header">巡诊对象列表
+                    </div>
+                    <div class="patrol-table-view health-table-default">
+                        <table class="layui-hide" id="patrolrecords-add" lay-filter="test"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form">
+                <div class="layui-form-item">
+                    <div class="layui-inline"><label class="layui-form-label"><span class="red-tip">*</span>开始时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input hyd-datea" id="addVisitVisit_StartDate"
+                                                               placeholder="请选择" readonly="" lay-key="2">
+                        </div>
+                    </div>
+                    <div class="layui-inline"><label class="layui-form-label"><span class="red-tip">*</span>结束时间</label>
+                        <div class="layui-input-inline"><input type="text" class="layui-input hyd-datea" id="addVisitVisit_EndDate"
+                                                               placeholder="请选择" readonly="" lay-key="3"></div>
+                    </div>
+                </div>
+        </div>
+        <div class="layui-form-item layui-form-text"><label class="layui-form-label"><span class="red-tip">*</span>巡诊需求描述</label>
+                <div class="layui-input-block"><textarea placeholder="请输入内容" class="layui-textarea"
+                                                         style="width: 585px;" id="Description_addVisitVisit"></textarea></div>
+        </div>
+        <div class="layui-layer-btn layui-layer-btn-">
+            <a class="layui-layer-addVisitVisit">确定</a>
+            <a class="layui-layer-btn1">取消</a>
+        </div>
+        <span class="layui-layer-resize"></span>
+    </div>
+</script>
+
+
+
+
+

@@ -1,0 +1,1 @@
+[6524] 15 Oct 08:59:04.933 # Server started, Redis version 3.2.100

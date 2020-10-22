@@ -1,0 +1,10 @@
+{
+    "presets": [
+      [ "@babel/env",
+        { "modules": false }
+      ]
+    ],
+    "plugins": [
+        //"transform-runtime", // babel-plugin-transform-runtime 在这里使用;
+        "transform-remove-strict-mode"]  // 非严格模式编译
+  }

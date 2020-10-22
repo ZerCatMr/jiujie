@@ -1,0 +1,20 @@
+{
+  "code":0,
+  "message":"ssuccess",
+  "data":[{
+    "organid":"体检医院管理",
+    "organorder":"杨秋萍",
+    "organname":"杨秋萍"
+  },
+    {
+      "organid":"二医院体检管理员",
+      "organorder":"邓洪梅",
+      "organname":"邓洪梅"
+    },
+    {
+      "organid":"体检医院管理",
+      "organorder":"王贤清",
+      "organname":"王贤清"
+    }]
+
+}

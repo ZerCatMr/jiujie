@@ -1,0 +1,110 @@
+<!-- 术语管理-->
+<div class="layui-fluid" id="sysconfig_organ_manage">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <div class="layui-form layui-form-pane health-query">
+                <!-- 功能菜单区域-->
+                <div class="layui-form-item">
+                    <div>
+                        <label class="layui-form-label">术语类型</label>
+                        <div class="multi-checkbox layui-col-md8"  hyd-name="termcate_code" id="checkbox_termcate" lay-filter="check_termcate">
+
+                            <div hyd-value="2"><span>授权级别</span></div>
+
+                            <div hyd-value="3"><span>参检人员级别</span></div>
+                            <div hyd-value="4"><span>参检人员享受医疗待遇</span></div>
+                            <div hyd-value="5"><span>参检人员待遇类型</span></div>
+                            <div hyd-value="6"><span>参检人员类型</span></div>
+                            <div hyd-value="7"><span>参检单位性质</span></div>
+                            <br/>
+
+                            <div hyd-value="12"><span>特约医疗证证件类型</span></div>
+                            <div hyd-value="13"><span>特约医疗证内容变更类型</span></div>
+                            <div hyd-value="14"><span>特约医疗证享受待遇</span></div>
+                            <div hyd-value="15"><span>特约医疗证操作类型</span></div>
+                            <div hyd-value="16"><span>特约医疗证人员类型</span></div>
+                            <br/>
+
+                            <div hyd-value="8"><span>居住地类型</span></div>
+                            <div hyd-value="9"><span>体检方案类型</span></div>
+                            <div hyd-value="1"><span>增加人员原因</span></div>
+                            <div hyd-value="10"><span>减少人员原因</span></div>
+                            <div hyd-value="11"><span>性别</span></div>
+                            <div hyd-value="17"><span>VIP级别</span></div>
+
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <!--<div class="layui-form-item">
+                    <button type="button" class="layui-btn" lay-filter="hyd-query" name="query">
+                        <i class="layui-icon layui-icon-search">查询机构</i>
+                    </button>
+                    <button type="button" class="layui-btn" lay-filter="hyd-query" name="add">
+                        <i class="layui-icon layui-icon-add-circle">新增机构</i>
+                    </button>
+                </div>-->
+            </div>
+
+        </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search"  placeholder="术语名称"/>
+        </div>
+        <div class="health-right">
+            <button type="button" class="layui-btn" lay-filter="hyd-query" name="add">
+                <i class="layui-icon layui-icon-add-circle">新增术语</i>
+            </button>
+        </div>
+    </div>
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="managetable" lay-filter="managetable"></table>
+    </div>
+</div>
+
+<!--查看 编辑 停用 启用 按钮-->
+<!--<script type="text/html" id="manage_table_bolder">-->
+<!--    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="query_organ">查看</a>-->
+<!--    <a class="layui-btn layui-btn-xs" lay-event="edit_organ">编辑</a>-->
+<!--    {{#  if(d.status = "1"){ }}-->
+<!--    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="stop_organ">停用</a>-->
+<!--    {{#  } }}-->
+<!--    {{#  if(d.status = "-1") { }}-->
+<!--    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="start_organ">启用</a>-->
+<!--    {{#  } }}-->
+<!--</script>-->
+
+<!--术语表工具栏-->
+<script type="text/html" id="termdetail_bloder">
+    <a class="health-icon-operate" lay-event="edit_term"><i class="layui-icon layui-icon-edit" style="font-size: 23px;"></i></a>
+</script>
+
+
+<!-- 查看参检机构弹窗-->
+<script type="text/html" id="query_organ_layer">
+    <div>
+        查看参检机构弹窗
+    </div>
+</script>
+<!-- 编辑参检机构弹窗-->
+<script type="text/html" id="edit_organ_layer">
+    <div>
+        编辑参检机构弹窗
+    </div>
+</script>
+<!-- 新增参检机构弹窗-->
+<script type="text/html" id="add_organ_layer">
+    <div>
+        新增参检机构弹窗
+    </div>
+</script>
+
+
+
+<script>
+    layui.use('examset/term_maintain', layui.factory('examset/term_maintain'));
+</script>
+
+
+

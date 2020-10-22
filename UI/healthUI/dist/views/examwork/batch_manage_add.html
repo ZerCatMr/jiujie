@@ -1,0 +1,113 @@
+<style>
+    #examwork_batchmanage_add .add_top{
+
+    }
+    #examwork_batchmanage_add .add_left{
+        margin-top: -15px;
+    }
+    #examwork_batchmanage_add .add_right{
+        margin-top: -15px;
+
+    }
+    [name="right_add_organ"]{
+        cursor:pointer;
+    }
+</style>
+
+<!-- 批次管理/新增体检批次详情页面-->
+<div class="layui-fluid layui-row layui-col-space15" id="examwork_batchmanage_add">
+    <div class="layui-col-md12 add_top">
+        <div class="layui-card">
+            <div class="layui-card-body">
+                <div class="layui-inline">
+                    <label class="layui-form-label">年份：</label>
+                    <select name="city" >
+                        <option value="">请选择年份</option>
+                        <option value="010">2018</option>
+                        <option value="021">2019</option>
+                        <option value="0571">2020</option>
+                    </select>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">批次：</label>
+                    <select name="city">
+                        <option value="">请选择批次</option>
+                        <option value="010">2018年</option>
+                        <option value="021">2019年</option>
+                        <option value="0571">2020年</option>
+                    </select>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">标题：</label>
+                    <div class="layui-input-inline" style="width: 300px;">
+                        <input type="text" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 180px">起始日期：</label>
+                    <div class="layui-input-inline" style="width: 150px;">
+                        <input type="text" class="layui-input" id="start_date">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 10px;">至：</label>
+                    <div class="layui-input-inline" style="width: 100px;">
+                        <input type="text" class="layui-input" id="end_date">
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 200px;"></label>
+                    <div class="layui-btn layui-btn-normal" id="submitTab">确认</div>
+                    <div class="layui-btn layui-btn-primary" id="closeTab">取消</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md9 add_left">
+        <div class="layui-card" style="height: 720px">
+            <div class="layui-card-header">
+                <div class="layui-card health-toolbar">
+                    <div class="health-filter health-filter-input">
+                        <input type="text" name="health-search"  placeholder="搜索"/>
+                    </div>
+                </div>
+                <div style="text-align: center">
+                    <div>市管企业：25；  区县：35；  市级企业单位：15；  驻军部队：2；  其他：13；  </div>
+                </div>
+            </div>
+            <div class="layui-card-body">
+                <div class="layui-card health-table-default">
+                    <table lay-size="sm" class="layui-table" id="examwork_batchmanage_addtable" lay-filter="examwork_batchmanage_addtable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md3 add_right">
+        <div class="layui-card"  style="height: 720px">
+            <div class="layui-card-header">
+                <div class="layui-card health-toolbar">
+                    <div class="health-filter health-filter-input">
+                        <input type="text" name="health-search-right"  placeholder="搜索"/>
+                    </div>
+                </div>
+                <div style="text-align: center">
+                    <div>剩余单位总数:25</div>
+                </div>
+            </div>
+            <div class="layui-card-body">
+                <div class="layui-card health-table-default" >
+                    <table  id="add_organ_table" lay-filter="add_organ_table">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use('examwork/batch_manage_add', layui.factory('examwork/batch_manage_add'));
+</script>
+
+
+

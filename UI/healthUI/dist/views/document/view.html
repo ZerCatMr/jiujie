@@ -1,0 +1,73 @@
+<div class="layui-fluid">
+        <div class="layui-card">
+            <div class="layui-card-body">                            
+                <div class="layui-form layui-form-pane health-query">                            
+                    <div class="layui-form-item">
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">人员类型</label>
+                            <div class="multi-checkbox" hyd-name="worktype">
+                                <div><span hyd-value="0">在职</span></div>
+                                <div><span hyd-value="1">离休</span></div>
+                                <div><span hyd-value="2">退休</span></div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">医疗待遇</label>
+                            <div class="multi-checkbox" hyd-name="medtreat">
+                                <div><span hyd-value="0">省级</span></div>
+                                <div><span hyd-value="1">厅级</span></div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">授权情况</label>
+                            <div class="multi-checkbox" hyd-name="authstatus">
+                                <div><span hyd-value="0">已授权</span></div>
+                                <div><span hyd-value="1">未授权</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                            <div class="layui-col-md3">
+                                <label class="layui-form-label">姓名</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="personname" placeholder="姓名" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-col-md3">
+                                <label class="layui-form-label">身份证号</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="personIdenNo" placeholder="身份证号" class="layui-input">
+                                </div>
+                            </div>
+                    </div>
+                    <br/>
+                    <div class="layui-form-item">
+                        <button type="button" class="layui-btn" lay-filter="hyd-query" name="doc_queryView">
+                            <i class="layui-icon layui-icon-search">查询</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card health-toolbar">
+            <div class="health-filter health-filter-input">
+                <input type="text" name="health-search"  placeholder="过滤"/>
+                <i class="layui-icon layui-icon-search"></i>
+            </div>
+        </div>
+        <div class="layui-card health-table-default">
+            <table lay-size="sm" class="layui-table" id="documentviewtb" lay-filter="documentviewtb"></table>
+        </div>
+</div>
+<script type="text/html" id="operation">
+    <div class="layui-btn-group">
+        <a lay-event='viewdocument' title="查看档案"><i class="layui-icon layui-icon-read hyd-icon-operation"></i></a>
+    </div>
+</script>
+<script>
+layui.use('document/view', layui.factory('document/view'));
+</script>
+    
+    
+    
+    

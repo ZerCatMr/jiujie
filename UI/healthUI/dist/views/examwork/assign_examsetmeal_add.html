@@ -1,0 +1,324 @@
+<style>
+    #examwork_assignexamsetmeal_add{
+        user-select:none;
+    }
+    #examwork_assignexamsetmeal_add .left_main_talbe{
+        height: 270px;
+        width: 280px;
+        border: 1px solid;
+        text-align: center;
+        display: inline-block;
+        overflow:hidden;
+        float: left;
+    }
+    #examwork_assignexamsetmeal_add .check_left_main_body{
+        background-color: #f7f7f7;
+        height: 580px;
+        overflow: auto;
+    }
+    #examwork_assignexamsetmeal_add #add_check_right_main{
+        overflow: auto;
+    }
+    #examwork_assignexamsetmeal_add .list-group-item{
+        height: auto;
+        float:left;
+        width:85%;
+    }
+    #examwork_assignexamsetmeal_add .check_schedule_organlist .check_body{
+        margin-right: 10%;
+    }
+    #examwork_assignexamsetmeal_add .check_main_tab{
+        overflow:auto;
+        height: 740px;
+    }
+    #examwork_assignexamsetmeal_add svg{
+        cursor:pointer;
+    }
+    #examwork_assignexamsetmeal_add #add_check_add_plan{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    #examwork_assignexamsetmeal_add .table_Telescopic{
+        user-select:none;
+    }
+    #examwork_assignexamsetmeal_add .icon {
+        width: 1em; height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+    #examwork_assignexamsetmeal_add .check_main_tab .layui-this{
+        background-color: #00c1de;
+        color: white;
+    }
+    #examwork_assignexamsetmeal_add .tab_title_typeNam li{
+        width: 190px;
+    }
+    #examwork_assignexamsetmeal_add .tab_title_hospNam li{
+        width: 200px;
+    }
+    #examwork_assignexamsetmeal_add .list-group-item{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #examwork_assignexamsetmeal_add .list-group-item h2{
+        border: 1px solid
+    }
+    #examwork_assignexamsetmeal_add .left_main_talbe .layui-card-header{
+        height: 20px;
+        background-color: #147eba;
+        text-align: left;
+        color: white;
+    }
+    #examwork_assignexamsetmeal_add .left_main_talbe .check_left_main_body{
+        border: 1px;
+        background-color: #85C998;
+    }
+    #examwork_assignexamsetmeal_add .left_main_talbe .check_left_main_close{
+        border: 1px;
+        background-color: #ff784e;
+    }
+    #examwork_assignexamsetmeal_add .list-group-item h2{
+        border: 1px solid;
+        width: 125%;
+        margin-left: -20px;
+    }
+    #examwork_assignexamsetmeal_add .list-group-item .layui-col-md3{
+        text-align: right;
+    }
+    #examwork_assignexamsetmeal_add [name="personList"]{
+        display: none;
+    }
+    #examwork_assignexamsetmeal_add .left_main_talbe .layui-card-header .layui-col-md3{
+        text-align: right;
+    }
+    #examwork_assignexamsetmeal_add .left_main_talbe [name="sortable"]{
+        text-align: center;
+    }
+    #examwork_assignexamsetmeal_add .layui-colla-item h2 .layui-col-md9{
+        text-align: left;
+    }
+    #examwork_assignexamsetmeal_add .bellows__item{
+        border: 1px solid #3498db;
+        margin-bottom: 3px;
+    }
+    #examwork_assignexamsetmeal_add .tab_title_typeNam, .tab_title_hospNam{
+        background-color: #f7f7f7;
+    }
+    [check_type="person"]{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 8px;
+    }
+    #examwork_assignexamsetmeal_add .organ_shanchu{
+        margin-left: -40px;
+        font-size: 30px;
+    }
+    #examwork_assignexamsetmeal_add .organ_shanchu:hover{
+        color: #FF5722;
+    }
+    #examwork_assignexamsetmeal_add .floating_btns {
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-left: 700px;
+    }
+    #examwork_assignexamsetmeal_add .bellows__header {
+        position: relative;
+        padding: 10px 10px;
+        border: 1px solid #2980b9;
+        background: #3498db;
+        color: white;
+        -webkit-tap-highlight-color: transparent;
+    }
+    #examwork_assignexamsetmeal_add .bellows__header:hover{
+        background-color: #2980b9;
+    }
+    #examwork_assignexamsetmeal_add [name="title_icon"] :hover{
+        cursor: pointer;
+    }
+    #examwork_assignexamsetmeal_add [name="title_icon"] i:hover{
+        color: #FF5722;
+    }
+    #examwork_assignexamsetmeal_add [name="title_size"]{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    #examwork_assignexamsetmeal_add .big_del i:hover{
+        cursor: pointer;
+        color: #FD482C;
+    }
+    #examwork_assignexamsetmeal_add .left_setmeal{
+        margin-left: 100px;
+        text-align: center;
+        float: left;
+        width: 600px;
+        height: auto;
+        border: 1px solid;
+        box-sizing:border-box;
+        /*关键代码*/
+        position: relative;
+    }
+    #examwork_assignexamsetmeal_add .left_setmeal i{
+        font-size: 20px;
+        color: white;
+    }
+    #examwork_assignexamsetmeal_add .left_setmeal .big{
+        background: #3498db;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        align-items:center;
+        display: -webkit-flex;
+        justify-content:left;
+    }
+    #examwork_assignexamsetmeal_add .left_setmeal .small{
+        background: #F0F0F0;
+        height: 100%;
+        float: left;
+        min-height: 58px;
+    }
+    #examwork_assignexamsetmeal_add #add_left_center_setmeal .small div:hover{
+        background-color: #85C998;
+    }
+    #examwork_assignexamsetmeal_add #add_left_center_setmeal .small div i{
+        opacity: 0;
+        float: right;
+    }
+    #examwork_assignexamsetmeal_add #add_left_center_setmeal .small div:hover i{
+        opacity: 1;
+    }
+    #examwork_assignexamsetmeal_add #add_left_center_setmeal .small div i:hover{
+        cursor: pointer;
+        color: #FF5722;
+    }
+    #examwork_assignexamsetmeal_add #add_left_center_setmeal .big_name {
+        color: white;
+        font-size: 20px;
+        text-align: left;
+        float: left;
+        margin-left: 5px;
+    }
+    #examwork_assignexamsetmeal_add #add_left_center_setmeal {
+        height: 650px;
+        border-left: 1px solid;
+        border-right: 1px solid;
+        background-color: #b2b2b2;
+    }
+    #examwork_assignexamsetmeal_add #add_left_center_setmeal .big_right{
+        align-items:center;
+        display: -webkit-flex;
+        justify-content:center;
+    }
+    #examwork_assignexamsetmeal_add .small_center{
+        text-align: left;
+        float: left;
+        margin-left: 5px;
+        margin-top: 0px;
+    }
+    #examwork_assignexamsetmeal_add .escalate_sort{
+        float: right;
+        margin-right: 5px;
+    }
+    #examwork_assignexamsetmeal_add .dell_sort{
+        float: right;
+    }
+    #examwork_assignexamsetmeal_add .big_del{
+        margin-right: 5px;
+        margin-top: 5px;
+        font-size: 25px;
+    }
+
+    #examwork_assignexamsetmeal_add .big_del i{
+        font-size: 25px;
+        margin-left: 10px;
+    }
+
+    #examwork_assignexamsetmeal_add .left_small{
+        line-height: 30px;
+    }
+</style>
+<!-- 指定体检套餐/新增体检套餐 -->
+<div style="padding: 20px; background-color: rgb(199,237,204); width: 100%;" id="examwork_assignexamsetmeal_add">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md9 left">
+            <div class="layui-card left_top">
+                <div class="layui-card-body">
+                    <div class="layui-col-md12 layui-form-item">
+                        <div class="layui-col-md4 layui-form layui-form-pane health-query">
+                            <!-- 功能菜单区域-->
+                            <div class="layui-form-item">
+                                    <label class="layui-form-label">人员级别</label>
+                                    <div class="multi-checkbox">
+                                        <div hyd-value=""><span>省级</span></div>
+                                        <div hyd-value=""><span>厅级</span></div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-md8" name="title">
+                            <div class="layui-inline layui-col" name="title_input" style="display: none">
+                                <div class="layui-col-md12" style="width: 700px">
+                                    <div class="layui-col-md6"><input type="text" class="layui-input"></div>
+                                    <div class="layui-col-md6" style="margin-top: 5px">
+                                        &nbsp;&nbsp;
+                                        <button id="add_title_submit" class="layui-btn layui-btn-normal layui-btn-sm">确认</button>
+                                        <button id="add_title_cancel" class="layui-btn layui-btn-primary layui-btn-sm">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-inline" style="display: block" name="title_center">
+                                <sapn name="title_size">2020年春季干部健康体检检查项目表(女)</sapn>
+                                <span name="title_icon"><i class="layui-icon layui-icon-edit" style="font-size: 30px;"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form layui-form-pane health-query">
+                        <!-- 功能菜单区域-->
+                        <div class="layui-form-item">
+                            <div class="layui-col-md10">
+                                <label class="layui-form-label">人员性别</label>
+                                <div class="multi-checkbox">
+                                    <div hyd-value="2018"><span>男性</span></div>
+                                    <div hyd-value="2017"><span>女性</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-card left_center">
+                <!-- 定制体检套餐区域-->
+                <div class="layui-card-body" style="height: 670px">
+                        <div class="layui-col-md2">&nbsp;</div>
+                        <div class="layui-col-md8"  id="add_left_center_setmeal">
+
+                        </div>
+                        <div class="layui-col-md2">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md3 right">
+            <div class="layui-card check_body" style="height: 800px">
+                <div class="layui-card-body">
+                    <div class="layui-tab check_main_tab">
+                        <!-- 体检套餐列表-->
+                        <div class="bellows single" id="add_right_setmeal" name="sortable">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    layui.use('examwork/assign_examsetmeal_add', layui.factory('examwork/assign_examsetmeal_add'));
+</script>
+
+
+

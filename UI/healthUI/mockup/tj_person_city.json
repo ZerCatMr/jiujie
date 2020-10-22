@@ -1,0 +1,23 @@
+{
+	"code": "1",
+	"data": [
+        {"quotaname":"在职正厅级领导",
+            "planAll":1254,"factAll":1173,"percentAll":93.54
+        },
+        {"quotaname":"在职副厅级领导",
+            "planAll":413,"factAll":333,"percentAll":80.62
+        },
+        {"quotaname":"离退休厅级领导",
+            "planAll":2163,"factAll":1592,"percentAll":73.60
+        },
+        {"quotaname":"享受厅级待遇",
+            "planAll":723,"factAll":377,"percentAll":52.14
+        },
+        {"quotaname":"市州厅级领导",
+            "planAll":233,"factAll":117,"percentAll":50.21
+        },
+        {"quotaname":"合计",
+            "planAll":4140,"factAll":3142,"percentAll":75.89
+        }
+    ]
+}

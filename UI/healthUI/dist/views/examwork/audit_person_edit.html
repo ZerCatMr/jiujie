@@ -1,0 +1,19 @@
+<!--审核人员名单-->
+<div class="layui-fluid" id="examwork_auditperson_edit">
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search"  placeholder="过滤"/>
+        </div>
+    </div>
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="auditpersonedittable" lay-filter="auditpersonedittable"></table>
+    </div>
+</div>
+
+
+<script>
+    layui.use('examwork/audit_person_edit', layui.factory('examwork/audit_person_edit'));
+</script>
+
+
+

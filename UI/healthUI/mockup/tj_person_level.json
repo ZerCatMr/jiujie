@@ -1,0 +1,17 @@
+{
+	"code": "1",
+	"data": [
+        {"quotaname":"在职",
+            "planAll":1254,"factAll":1173,"percentAll":93.54
+        },
+        {"quotaname":"退休",
+            "planAll":2163,"factAll":1592,"percentAll":73.60
+        },
+        {"quotaname":"离退",
+            "planAll":723,"factAll":377,"percentAll":52.14
+        },
+        {"quotaname":"合计",
+            "planAll":4140,"factAll":3142,"percentAll":75.89
+        }
+    ]
+}

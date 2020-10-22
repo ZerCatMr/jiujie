@@ -1,0 +1,208 @@
+<!-- 体检管理/体检项目维护-->
+<div class="layui-fluid" id="examset_project_maintain">
+	<div class="layui-row layui-col-space15">
+
+		<div class="layui-col-md6">
+			<div class="layui-col-md12">
+				<fieldset class="layui-elem-field layui-field-title">
+					<legend>体检项目分类</legend>
+				</fieldset>
+			</div>
+			<div class="layui-col-md9">
+				<div class="health-toolbar">
+					<div class="health-filter health-filter-input">
+						<input type="text" name="health-search" placeholder="分类名称" />
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md3">
+				<div class="layui-btn" lay-filter="hyd-query" name="add" id="add_projectcate" style="text-align: center;">
+					<i class="layui-icon layui-icon-add-circle"> 新增体检分类</i>
+				</div>
+			</div>
+			<div class="layui-card health-table-default">
+				<table lay-size="sm" class="layui-table" id="examset_projectmaintain_table" lay-filter="examset_projectmaintain_table"></table>
+			</div>
+		</div>
+		<div class="layui-col-md6">
+			<div class="layui-col-md12">
+				<fieldset class="layui-elem-field layui-field-title">
+					<legend>体检项目</legend>
+				</fieldset>
+			</div>
+			<div class="layui-card">
+				<div class="layui-col-md9">
+					<div class="health-toolbar">
+						<div class="health-filter health-filter-input">
+							<input type="text" name="health-project" placeholder="项目名称" />
+						</div>
+					</div>
+				</div>
+				<div class="layui-col-md3">
+					<div class="layui-btn" lay-filter="hyd-query" name="add" id="add_project" style="text-align: center;">
+						<i class="layui-icon layui-icon-add-circle"> 新增体检项目</i>
+					</div>
+				</div>
+				<div class="layui-card health-table-default">
+					<table lay-size="sm" class="layui-table" id="examset_projectdetail_table" lay-filter="examset_projectdetail_table"></table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 新增体检分类弹窗-->
+<script type="text/html" id="examset_projectmaintain_addlayer">
+	<div class="layui-form" style="margin-top: 20px;padding: 5px;">
+        <div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;">
+            <label class="layui-form-label project-form-label">序&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label>
+            <div class="layui-input-inline" style="flex: 1;">
+                <input type="text" name="addcate_order" required  lay-verify="required" disabled="disabled" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;margin-top: 20px;">
+            <label class="layui-form-label project-form-label">分类名称</label>
+            <div class="layui-input-inline" style="flex: 1;">
+                <input type="text" name="addcate_name" required  lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item" style="margin-top: 40px;">
+            <div class="layui-input-block"  style="margin: auto;width: 70%;display: flex;justify-content: space-around;">
+                <button class="layui-btn" lay-submit lay-filter="addcateSubmit">添加</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!-- 新增体检项目弹窗-->
+<script type="text/html" id="examset_projectdetail_addlayer">
+	<div class="layui-form" style="margin-top: 20px;padding: 5px;">
+        <div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;">
+            <label class="layui-form-label project-form-label">序&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label>
+            <div class="layui-input-inline" style="flex: 1;">
+                <input type="text" name="add_project_order" required lay-verify="required" placeholder="请输入序号" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+		<div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;">
+			<label class="layui-form-label project-form-label">项目名称</label>
+			<div class="layui-input-inline" style="flex: 1;">
+				<input type="text" name="add_project_name" required lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+			</div>
+		</div>
+		<div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;">
+			<label class="layui-form-label">添&nbsp;&nbsp;加&nbsp;&nbsp;到</label>
+			
+			<div class="layui-input-block" style="flex: 1;margin-left: 20px;margin-right: 10px;">
+				<select name="add_project_cateid" id="project_check" lay-verify="required" lay-verType="tips" lay-search>
+					<option>请选择</option>
+				</select>
+			</div>
+		</div>
+	
+		<div class="layui-form-item" style="margin-top: 20px;">
+			<div class="layui-input-block" style="margin: auto;width: 70%;display: flex;justify-content: space-around;">
+				<button class="layui-btn" lay-submit lay-filter="addSubmit">添加</button>
+				<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+			</div>
+		</div>
+	</div>
+</script>
+
+<!-- 查看体检项目弹窗-->
+<script type="text/html" id="examset_projectmaintain_querylayer">
+	<div>
+        查看体检项目弹窗
+    </div>
+</script>
+
+<!-- 编辑体检分类弹窗-->
+<script type="text/html" id="examset_projectmaintain_editlayer">
+	<div class="layui-form" style="margin-top: 20px;padding: 5px;">
+        <div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;">
+            <label class="layui-form-label project-form-label">序&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label>
+            <div class="layui-input-inline" style="flex: 1;">
+                <input type="text" name="projectcate_order" required  lay-verify="required" placeholder="请输入序号" autocomplete="off" class="layui-input" disabled="disabled">
+            </div>
+        </div>
+        <div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;">
+            <label class="layui-form-label project-form-label">分类名称</label>
+            <div class="layui-input-inline" style="flex: 1;">
+                <input type="text" name="projectcate_name" required  lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+		<!-- 隐藏框 -->
+		<div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;">
+		    <div class="layui-input-inline" style="flex: 1;">
+		        <input type="hidden" name="projectcate_id" required  lay-verify="required"  autocomplete="off" class="layui-input">
+		    </div>
+		</div>
+        <div class="layui-form-item" style="margin-top: 30px;">
+            <div class="layui-input-block" style="margin: auto;width: 70%;display: flex;justify-content: space-around;">
+                <button class="layui-btn" lay-submit lay-filter="formCate">修改</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!--编辑体检项目明细弹窗-->
+<script type="text/html" id="examset_projectdetail_editlayer">
+	<div class="layui-form" style="margin-top: 20px;padding: 5px;">
+        <div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;">
+            <label class="layui-form-label project-form-label">序&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label>
+            <div class="layui-input-inline" style="flex: 1;">
+                <input type="text" name="edit_project_order" required  lay-verify="required" placeholder="请输入序号" autocomplete="off" disabled="disabled" class="layui-input" >
+            </div>
+        </div>
+        <div class="layui-form-item" style="display: flex;justify-content: left;width: 98%;">
+            <label class="layui-form-label project-form-label">项目名称</label>
+            <div class="layui-input-inline" style="flex: 1;">
+                <input type="text" name="edit_project_name" required  lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+		<!--隐藏框 存储父级的cateId-->
+		<div class="layui-form-item">
+		    <div class="layui-input-inline">
+		        <input type="hidden" name="edit_project_cateid" required  lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+		    </div>
+		</div>
+		<!--隐藏框 存储id-->
+		<div class="layui-form-item">
+		    <div class="layui-input-inline">
+		        <input type="hidden" name="edit_project_id" required  lay-verify="required" placeholder="请输入名称" autocomplete="off" class="layui-input">
+		    </div>
+		</div>
+        <div class="layui-form-item" style="margin-top: 20px;">
+            <div class="layui-input-block" style="margin: auto;width: 70%;display: flex;justify-content: space-around;">
+                <button class="layui-btn" lay-submit lay-filter="formDetail">修改</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<!--查看 编辑 停用 启用 按钮-->
+<script type="text/html" id="examset_projectmaintaintable_bloder">
+	<a class="health-icon-operate" lay-event="edit"><i class="layui-icon layui-icon-edit" style="font-size: 23px;"></i></a>
+    <a class="health-icon-operate" lay-event="query"><i class="layui-icon layui-icon-next"></i></a>
+</script>
+
+<script type="text/html" id="examset_projectdetailtable_bloder">
+	<a class="health-icon-operate" lay-event="edit"><i class="layui-icon layui-icon-edit" style="font-size: 23px;"></i></a>
+</script>
+
+<script type="text/html" id="examset_projectmaintaintable_status">
+	<input type="checkbox" name="open" lay-skin="switch" lay-filter="switchTest" >
+</script>
+
+<script type="text/html" id="examset_projectdetailtable_status">
+	<input type="checkbox" name="open" lay-skin="switch" lay-filter="detail_status_switch">
+</script>
+
+
+<script>
+	layui.use('examset/project_maintain', layui.factory('examset/project_maintain'));
+</script>
+
+

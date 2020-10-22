@@ -1,0 +1,10 @@
+#默认配置
+spring:
+  profiles:
+    active: test
+  jpa:
+    open-in-view: false
+mybatis:
+  mapper-locations: classpath:mybatis/**/*Mapper.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+

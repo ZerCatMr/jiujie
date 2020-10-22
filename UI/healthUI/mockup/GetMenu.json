@@ -1,0 +1,93 @@
+{
+	"code": "1",
+	"data": [{
+			"cd": "EXA00",
+			"name": "体检工作",
+			"icon": "icon-jigouguanliicon_",
+			"title": "体检工作",
+			"list": [{
+				"cd": "M02EXA06",
+				"name": "查看体检计划",
+				"title": "查看体检计划",	
+				"list": [],
+				"jump": "examwork/exam_viewplan"
+			},{
+				"cd": "M02EXA07",
+				"name": "年度体检名单",
+				"title": "年度体检名单",	
+				"list": [],
+				"jump": "examwork/year_examperson"
+			}],
+			"jump": ""
+		}, {				
+			"cd": "DOC00",
+			"name": "档案管理",
+			"icon":"icon-yonghuguanli",
+			"title": "档案管理",
+			"list": [{
+				"cd": "DOC01",
+				"name": "健康档案授权",
+				"title": "健康档案授权",
+				"list": [],
+				"jump": "document/auth"
+			},{
+				"cd": "DOC02",
+				"name": "管理健康档案",
+				"title": "管理健康档案",
+				"list": [],
+				"jump": "document/manage"
+			},{
+				"cd": "DOC03",
+				"name": "查看健康档案",
+				"title": "查看健康档案",
+				"list": [],
+				"jump": "document/view"
+			}],
+			"jump": ""
+		}, {
+			"cd": "RPT00",
+			"name": "统计分析",
+			"icon":"icon-xinxitongji",
+			"title": "统计分析",
+			"list": [{
+				"cd": "RPT01",
+				"name": "体检信息统计",
+				"title": "体检信息统计",
+				"list": [],
+				"jump": "report/personnum"
+			}, {
+				"cd": "RPT02",
+				"name": "体检疾病统计",
+				"title": "体检疾病统计",
+				"list": [],
+				"jump": "report/illnum"
+			}],
+			"jump": ""
+		}, {
+			"cd": "PAT00",
+			"name": "健康诊疗",
+			"icon": "icon-jigouguanliicon_",
+			"title": "健康诊疗",
+			"list": [{
+				"cd": "PAT01",
+				"name": "健康个案信息",
+				"title": "健康个案信息",
+				"list": [],
+				"jump": "patrol/pat_health_info"
+			},{
+				"cd": "PAT02",
+				"name": "保健医生管理",
+				"title": "保健医生管理",
+				"list": [],
+				"jump": "patrol/pat_doctor_manag"
+			},{
+				"cd": "PAT03",
+				"name": "巡诊需求管理",
+				"title": "巡诊需求管理",
+				"list": [],
+				"jump": "patrol/pat_demand_manag"
+			}],
+			"jump": ""
+	}],
+	"message": "ok"
+}

@@ -1,0 +1,363 @@
+<!-- 系统管理/参检机构管理-->
+<div style="padding: 20px; width: 100%; height: 100%; overflow: auto">
+	<div class="layui-fluid" id="sysconfig_organ_manage">
+		<div class="layui-card">
+			<div class="layui-card-body">
+				<div class="layui-form layui-form-pane health-query">
+					<!-- 功能菜单区域-->
+					<div class="layui-form-item">
+						<div class="layui-col-md10">
+							<label class="layui-form-label">机构类型</label>
+							<div class="multi-checkbox" hyd-name="yearname" id="per-yearname">
+								<div hyd-value="1" class="hyd-selected"><span>管理机构</span></div>
+								<div hyd-value="2"><span>体检医院</span></div>
+								<div hyd-value="3"><span>参检单位</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="layui-card health-toolbar">
+			<div class="layui-col-md6">
+				<div class="health-filter health-filter-input" style="margin-top: 8px;">
+					<input type="text" name="manage-search" placeholder="过滤" style="margin: 5px 10px;" />
+				</div>
+			</div>
+			<div class="layui col-md6" id="orgin_manage_add">
+				<!-- <button type="button" class="layui-btn" style="float: right;margin: 5px" lay-filter="hyd-query" name="add">
+					<i class="layui-icon layui-icon-add-circle"> 新增机构</i>
+				</button> -->
+			</div>
+		</div>
+		<div class="layui-card health-table-default">
+			<table lay-size="sm" class="layui-table" id="managetable" lay-filter="managetable"></table>
+		</div>
+	</div>
+</div>
+
+
+<!--参检单位 查看 编辑 停用 启用 按钮-->
+<script type="text/html" id="manage_table_bolder">
+	<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="check_organ">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit_organ">编辑</a>
+    {{#  if(d.status == "1"){ }}
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="stop_organ">停用</a>
+    {{#  } }}
+    {{#  if(d.status == "0") { }}
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="start_organ">启用</a>
+    {{#  } }}
+</script>
+
+<!--体检医院 查看 编辑 停用 启用 按钮-->
+<script type="text/html" id="hospital_table_bolder">
+	<a class="layui-btn layui-btn-xs" lay-event="edit_hospital">编辑</a>
+	{{#  if(d.status == "1"){ }}
+	<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="stop_hospital">停用</a>
+	{{#  } }}
+	{{#  if(d.status == "0") { }}
+	<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="start_hospital">启用</a>
+	{{#  } }}
+</script>
+
+<!--管理机构 查看 编辑 停用 启用 按钮-->
+<script type="text/html" id="manageOrgan_table_bolder">
+	<a class="layui-btn layui-btn-xs" lay-event="edit_basicOrgan">编辑</a>
+</script>
+
+
+<!-- 查看参检机构弹窗-->
+<script type="text/html" id="query_organ_layer">
+	<div class="layui-form layui-form-pane Community_OutPat_details_from_filter">
+	        <div class="layui-inline" style="margin-top: 30px;">
+	            <label class="layui-form-label">机构排序号</label>
+	            <div class="layui-input-inline">
+	                <div class="layui-form-item">
+	                    <input type="text" name="edit_organorder"  class="layui-input">
+	                </div>
+	            </div>
+	        </div>
+	
+	        <div class="layui-inline">
+	            <label class="layui-form-label">机构名称</label>
+	            <div class="layui-input-inline">
+	                <div class="layui-form-item">
+	                    <input type="text" name="edit_organname"  class="layui-input">
+	                </div>
+	            </div>
+	        </div>
+	
+	        <div class="layui-inline" >
+	            <label class="layui-form-label">机构性质</label>
+	            <div class="layui-input-inline">
+	              <div class="layui-form-item">
+	                  <input type="text" name="edit_organnature"  class="layui-input">
+	              </div>
+	            </div>
+	        </div>
+			
+	        <div class="layui-inline" >
+	            <label class="layui-form-label">机构地址</label>
+	            <div class="layui-input-inline">
+	                <div class="layui-form-item">
+	                    <input type="text" name="edit_organaddress"  class="layui-input">
+	                </div>
+	            </div>
+	        </div>
+			<div class="layui-inline">
+	            <label class="layui-form-label">机构电话</label>
+	            <div class="layui-input-inline">
+	                <div class="layui-form-item">
+	                    <input type="text" name="edit_organphone"  class="layui-input">
+	                </div>
+	            </div>
+	        </div>
+	        <div class="layui-inline">
+	            <label class="layui-form-label">账号前缀</label>
+	            <div class="layui-input-inline">
+	                <div class="layui-form-item">
+	                    <input type="text" name="edit_organprefix"  class="layui-input">
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+</script>
+
+<!-- 编辑参检机构弹窗-->
+<script type="text/html" id="edit_organ_layer">
+	<div class="layui-form layui-form-pane Community_OutPat_details_from_filter">
+            <div class="layui-inline" style="margin-top: 15px">
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="hidden" name="edit_organid"  class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">机构排序号</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="edit_organorder"  class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">机构名称</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="edit_organname"  class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-inline" >
+                <label class="layui-form-label">机构性质</label>
+                <div class="layui-input-inline">
+                   <select name="edit_organ_organnature" id="edit_organ_organnature"  lay-verify="required" lay-search>
+                   	<option id="edit_organ_firstOption">请选择</option>
+                   </select>
+                </div>
+            </div>
+			
+            <div class="layui-inline" style="margin-top: 15px;">
+                <label class="layui-form-label">机构地址</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="edit_organaddress"  class="layui-input">
+                    </div>
+                </div>
+            </div>
+			<div class="layui-inline">
+                <label class="layui-form-label">机构电话</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="edit_organphone"  class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">账号前缀</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="edit_organprefix"  class="layui-input">
+                    </div>
+                </div>
+            </div>
+			<div class="layui-inline" >
+			    <label class="layui-form-label">保密单位</label>
+			    <div class="layui-input-inline">
+			      <select name="eidt_organ_secret" id="eidt_organ_secret"  lay-verify="required" lay-search>
+			      	<option>请选择</option>
+			      	<option value="1">是</option>
+			      	<option value="0">否</option>
+			      </select>
+			    </div>
+			</div>
+			<div class="layui-form-item" style="margin-top: 40px;" name="edit_button">
+			    <div class="layui-input-block" style="margin: auto;width: 70%;display: flex;justify-content: space-around;">
+			        <button class="layui-btn"  lay-submit lay-filter="edit_organ_submit">修改</button>
+			        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+			    </div>
+			</div>
+        </div>
+</script>
+
+<!-- 编辑管理机构弹窗-->
+<script type="text/html" id="edit_basicOrgan_layer">
+	<div class="layui-form layui-form-pane Community_OutPat_details_from_filter">
+            <div class="layui-inline" style="margin-top: 25px">
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="hidden" name="edit_basic_id"  class="layui-input" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-inline" style="margin-top: 10px;">
+                <label class="layui-form-label">机构名称</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="edit_basic_organname"  class="layui-input">
+                    </div>
+                </div>
+            </div>
+			
+			<div class="layui-form-item" style="margin-top: 40px;" name="edit_button">
+			    <div class="layui-input-block" style="margin: auto;width: 70%;display: flex;justify-content: space-around;">
+			        <button class="layui-btn"  lay-submit lay-filter="edit_basicOrgan_submit">修改</button>
+			        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+			    </div>
+			</div>
+        </div>
+</script>
+
+<!-- 编辑体检医院弹窗-->
+<script type="text/html" id="edit_hospital_layer">
+	<div class="layui-form layui-form-pane Community_OutPat_details_from_filter">
+            <div class="layui-inline" style="margin-top: 25px">
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="hidden" name="edit_hosptial_hospid"  class="layui-input" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-inline" style="margin-top: 10px;margin-left: 10px;">
+                <label class="layui-form-label project-form-label" >医院名称</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item" style="flex: 1;">
+                        <input type="text" name="edit_hosptial_hospname"  class="layui-input">
+                    </div>
+                </div>
+            </div>
+			<div class="layui-form-item" style="margin-top: 40px;" name="edit_button">
+			    <div class="layui-input-block" style="margin: auto;width: 70%;display: flex;justify-content: space-around;">
+			        <button class="layui-btn"  lay-submit lay-filter="edit_hospital_submit">修改</button>
+			        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+			    </div>
+			</div>
+        </div>
+</script>
+
+<!-- 新增参检机构视图 -->
+<script type="text/html" id="add_organ">
+	<div class="layui-form layui-form-pane Community_OutPat_details_from_filter">
+            <div class="layui-inline" style="margin-top: 20px;">
+                <label class="layui-form-label">机构排序号</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="add_organ_order" id="add_organ_order" class="layui-input" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">机构名称</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="add_organname"  class="layui-input" required="required">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-inline" >
+                <label class="layui-form-label">机构性质</label>
+                <div class="layui-input-inline">
+                    <select name="add_organ_organnature" id="add_organ_organnature"  lay-verify="required" lay-search>
+                    	<option>请选择</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline" style="margin-top: 15px;">
+                <label class="layui-form-label">机构地址</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="add_organaddress"  class="layui-input" required="required">
+                    </div>
+                </div>
+            </div>
+			
+			<div class="layui-inline" style="margin-top: 15px;">
+			    <label class="layui-form-label">机构电话</label>
+			    <div class="layui-input-inline">
+			        <div class="layui-form-item">
+			            <input type="text" name="add_organaddphone"  class="layui-input" required="required">
+			        </div>
+			    </div>
+			</div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">账号前缀</label>
+                <div class="layui-input-inline">
+                    <div class="layui-form-item">
+                        <input type="text" name="add_organprefix"  class="layui-input" required="required">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <label class="layui-form-label">保密单位</label>
+                <div class="layui-input-inline">
+                   <select name="add_organ_secret" id="add_organ_secret"  lay-verify="required" lay-search>
+                   	<option>请选择</option>
+					<option value="1">是</option>
+					<option value="0">否</option>
+                   </select>
+                </div>
+            </div>
+
+		<div class="layui-form-item" style="margin-top: 40px;">
+            <div class="layui-input-block" style="margin: auto;width: 70%;display: flex;justify-content: space-around;">
+                <button class="layui-btn"  lay-submit lay-filter="add_organ_submit">添加</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+     </div>
+</script>
+
+
+<style>
+	.Community_OutPat_details_from_filter .layui-inline .layui-input-inline {
+		width: 550px;
+	}
+
+	.layui-disabled,
+	.layui-disabled:hover {
+		color: #0C0C0C !important;
+		cursor: not-allowed !important;
+	}
+</style>
+
+<!--添加按钮-->
+<script id="add_button_html" type="text/html">
+	<button type = "button" id="add_button" class="layui-btn" style="float: right;margin: 5px"  name="add_button" >
+		<i class = "layui-icon layui-icon-add-circle" > 新增机构</i> 
+	</button>
+</script>
+
+<script>
+	layui.use('sysconfig/organ_manage', layui.factory('sysconfig/organ_manage'));
+</script>

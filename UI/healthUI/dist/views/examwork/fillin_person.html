@@ -1,0 +1,95 @@
+<!-- 干保办体检管理/填报人员名单-->
+<div class="layui-fluid" id="examwork_fillinperson">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <div class="layui-form layui-form-pane health-query">
+                <!-- 功能菜单区域-->
+                <div class="layui-form-item">
+                    <div class="layui-col-md10">
+                        <label class="layui-form-label">体检批次</label>
+                        <div class="layui-col-md3">
+                            <select name="batch" lay-verify="">
+                                <option value="010">2019春季</option>
+                                <option value="021">2020春季</option>
+                            </select>
+                        </div>
+                        <label class="layui-form-label">参检单位</label>
+                        <div class="layui-col-md3">
+                            <select name="organ" lay-verify="" lay-search>
+                                <option value="">请选择单位</option>
+                                <option value="aaa">单位a</option>
+                                <option value="bbb">单位b</option>
+                                <option value="ccc">单位c</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn" lay-filter="hyd-query" name="query">
+                        <i class="layui-icon layui-icon-search">查询</i>
+                    </button>
+                    <button type="button" class="layui-btn" lay-filter="hyd-query" name="audit">
+                        <i class="layui-icon layui-icon-add-circle">新增</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search"  placeholder="过滤"/>
+        </div>
+    </div>
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="fillinpersontable" lay-filter="fillinpersontable"></table>
+    </div>
+</div>
+
+<!--查看 编辑 停用 启用 按钮-->
+<script type="text/html" id="fillinpersontable_bolder">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="bolder_query">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="bolder_edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="bolder_del">删除</a>
+</script>
+<!--查询 新增  弹出下拉框-->
+<script type="text/html" id="fillinperson_select">
+    <div id="fillinperson_select_center">
+        <br/>
+        <div class="layui-form layui-form-pane health-query">
+            <div class="layui-form-item">
+                <div class="layui-col-md10">
+                    <label class="layui-form-label">体检批次</label>
+                    <div class="layui-col-md6">
+                        <select name="batch" lay-verify="">
+                            <option value="010">2019春季</option>
+                            <option value="021">2020春季</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-col-md10">
+                    <label class="layui-form-label">参检单位</label>
+                    <div class="layui-col-md6">
+                        <select name="organ" lay-verify="" lay-search>
+                            <option value="">请选择单位</option>
+                            <option value="010">单位a</option>
+                            <option value="021">单位b</option>
+                            <option value="057">单位c</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+
+<script>
+    layui.use('examwork/fillin_person', layui.factory('examwork/fillin_person'));
+</script>
+
+
+

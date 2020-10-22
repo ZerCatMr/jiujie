@@ -1,0 +1,168 @@
+.health-query.layui-form-pane .layui-form-label {
+ font-size:small;
+}
+.health-query .layui-form-item {
+    margin-bottom:2px;
+}
+.health-query .layui-form-checkbox span {
+    font-size:small;
+    padding: 0px 3px;
+}
+.health-query .multi-checkbox div {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 0;
+    -webkit-transition: .1s linear;
+    transition: .1s linear;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    border-color: #d2d2d2;
+    border-style: solid;
+    border-width: 1px;
+    margin:4px 0 4px 10px;
+}
+.health-query .multi-checkbox .hyd-selected {
+    background-color: #5fB878;
+}
+.health-query .multi-checkbox .hyd-selected span {
+    background-color: #5fB878;
+    color:#fff;
+}
+.health-query .multi-checkbox div span {
+    padding: 0 10px;
+    height: 100%;
+    font-size: small;
+    border-radius: 2px 0 0 2px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+
+
+.health-table-default{
+
+}
+.health-table-default .layui-table-view{
+	margin-top: -2px;
+}
+
+.health-table-default .layui-table-view .layui-table td {
+	padding: 2px 0;
+}
+.health-table-default .layui-table-header thead tr{
+    background-color: #009688;
+    color:#fff;
+}
+.health-table-default .layui-table-header thead tr .layui-table-cell{
+    font-size: 10px;
+}
+.health-table-default .layui-table-body tbody tr .layui-table-cell{
+    font-size: 10px;
+    padding: 0 10px;
+}
+.health-table-default .layui-table-body .layui-table .layui-table-click {
+	background-color: #f9f0da;
+}
+.health-table-default .layui-table-body .layui-table tbody tr:hover {
+	background-color: #ffc633;
+}
+.health-table-default .layui-table-body tbody tr:nth-child(odd){
+	background-color: #FFF;
+}
+.health-table-default .layui-table-body tbody tr:nth-child(even){
+	background-color: #F5FAFA;
+}
+.health-table-default .layui-table-tool {
+    background-color: #fff;
+}
+.health-table-default .layui-table-grid-down{
+    display: none;
+}
+.health-filter {
+	float:left;
+	position: relative;
+	margin: 0 auto;
+    height:30px;
+    width: 200px;
+}
+.health-filter input,.health-filter i{
+	border: none;
+    outline: none;
+}
+.health-filter input{
+	width: 100%;
+    height: 24px;
+    padding-left: 13px;
+}
+.health-filter i{
+	height: 24px;
+    width: 24px;
+    cursor: pointer;
+    position: absolute;
+}
+.health-filter-input {background: transparent;}
+.health-filter-input input {
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid #324B4E;
+    background: #F9F0DA;
+    transition: .3s linear;
+    float: left;
+    margin-left: 15px;
+    margin-top: 7px;
+}
+.health-filter-input i {
+    background: none;
+    font-size:24px;
+    top: 8px;
+    right: -28px;
+}
+.health-filter-input i:before{
+  content: "\e615";
+  font-family: 'layui-icon';
+  color: #324b4e;
+}
+.health-toolbar .health-right{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/*图标*/
+.health-icon-operate{
+    float: left;
+    padding: 6px;
+}
+
+/** 设置巡诊模块的操作按钮组样式 **/
+.pat_toobar{
+    margin-bottom:0%;
+    margin-left: 0%;
+}
+
+.hyd-icon-operation{
+    font-size: 20px; 
+    color: #4BB2FF;
+    margin-left:5px;
+    margin-right: 5px;
+    cursor:pointer;
+}
+
+.layui-form-pane .layui-form-label.hyd-label-view{
+    background-color:#fff;
+    width: calc(100% - 150px);
+}
+.hyd-card-panel.layadmin-contact-box{
+    background-color:#fff;
+    cursor: pointer;
+}
+.hyd-col-padding10 {
+    padding: 10px;
+}
+.project-form-label {
+    width: 100px;
+    text-align: left;
+}

@@ -1,0 +1,257 @@
+<!-- 安排体检日程 -->
+<style>
+    .left_main_talbe{
+        height: 270px;
+        width: 280px;
+        border: 1px solid;
+        margin: 5px;
+        text-align: center;
+        display: inline-block;
+        overflow:hidden;
+        float: left;
+    }
+    .check_left_main_body{
+        background-color: #f7f7f7;
+        height: 580px;
+        overflow: auto;
+
+    }
+    #check_right_main{
+        overflow: auto;
+    }
+
+    .list-group-item{
+        height: auto;
+        float:left;
+        width:85%;
+        margin:5px;
+
+    }
+    .check_schedule_organlist .check_body{
+        margin-right: 10%;
+    }
+    .check_main_tab{
+        overflow:auto;
+        height: 740px;
+    }
+    svg{
+        cursor:pointer;
+    }
+    #check_add_plan{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .table_Telescopic{
+        user-select:none;
+    }
+     .icon {
+      width: 1em; height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+    .check_main_tab .layui-this{
+        background-color: #00c1de;
+        color: white;
+    }
+    .tab_title_typeNam li{
+        width: 190px;
+    }
+    .tab_title_hospNam li{
+        width: 200px;
+    }
+    .list-group-item{
+       margin-left: 10px;
+        margin-right: 10px;
+    }
+    .list-group-item h2{
+        border: 1px solid
+    }
+    .left_main_talbe .layui-card-header{
+        height: 40px;
+        background-color: #147eba;
+        text-align: left;
+        color: white;
+    }
+    .left_main_talbe .check_left_main_body{
+        border: 1px;
+        background-color: #85C998;
+    }
+    .left_main_talbe .check_left_main_close{
+        border: 1px;
+        background-color: #ff784e;
+    }
+    .list-group-item h2{
+        border: 1px solid;
+        width: 125%;
+        margin-left: -20px;
+    }
+    .list-group-item .layui-col-md3{
+        text-align: right;
+    }
+    [name="personList"]{
+        display: none;
+    }
+    .left_main_talbe .layui-card-header .layui-col-md3{
+        text-align: right;
+    }
+    .left_main_talbe [name="sortable"]{
+        text-align: center;
+    }
+    .layui-colla-item h2 .layui-col-md9{
+        text-align: left;
+    }
+    .bellows__item{
+        border: 1px solid #3498db;
+        margin-bottom: 5px;
+    }
+    bellows__item .bellows__header{
+        height: 40px;
+        line-height: 10px
+    }
+    .tab_title_typeNam, .tab_title_hospNam{
+        background-color: #f7f7f7;
+    }
+    [check_type="person"]{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 8px;
+    }
+    .organ_shanchu{
+        margin-left: -40px;
+        font-size: 30px;
+    }
+    .organ_shanchu:hover{
+        color: #FF5722;
+    }
+
+</style>
+
+<div style="padding: 20px; background-color: rgb(199,237,204); width: 100%;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md9">
+            <div class="layui-card check_body">
+                <div class="layui-card-header">安排列表</div>
+                <div class="layui-card-body">
+                    <!-- 选项卡信息 -->
+                    <div class="layui-tab check_main_tab" lay-filter="sched_left_tab" id="Schedu_table_config">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="check_schedule_organlist layui-col-md3">
+            <div class="layui-card check_body">
+                <div class="layui-card-header">单位列表</div>
+                <div class="layui-card-body">
+                    <div class="layui-tab check_main_tab">
+                        <!-- 条件筛选区-->
+                        <div class="layui-collapse">
+                            <div class="layui-form layui-form-pane health-query">
+                                <div class="layui-form-item">
+                                    <div class="layui-col-md12">
+                                        <div class="multi-checkbox" id="sched_right_organview">
+
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <div class="layui-col-md12">
+                                        <div class="layui-col-md8">
+                                            <input type="text" style="margin-left: 10px;margin-bottom: 5px" name="right_queryOrgans_input" required lay-verify="required" placeholder="搜索单位" autocomplete="off" class="layui-input">
+                                        </div>
+                                        <div class="layui-col-md4">
+                                            <button class="layui-btn layui-btn-normal" id="right_queryOrgans_btn">查询</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <!-- 单位列表-->
+                        <div class="bellows single" id="check_right_main" name="sortable">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 新增计划弹出层-->
+<script type="text/html" id="check_add_plan_layer">
+    <div class="layui-card-body">
+        <div class="layui-col-md12">
+            <form class="layui-form layui-form-pane health-query" id="a_form">
+                <div class="layui-form-item">
+                    选择日期
+                    <input type="text" class="layui-input" id="plan_layer_date">
+                </div>
+                <br/>
+                <div class="layui-form-item">
+                    <div class="layui-layer-btn layui-layer-btn-">
+                        <a class="layui-layer-addVisitVisit" id="hyd_auth_sumbit">确定</a>
+                        <a class="layui-layer-btn1" name="hyd_auth_colse">取消</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</script>
+
+<!-- 操作已排期的单位人员信息-->
+<script type="text/html" id="oper_plan_perosns">
+    <div class="layui-card-body">
+        <div class="layui-col-md12">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                        <div class="layui-col-md12">
+                           当前机构名称: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="plan_thisOrgan" organId="" value="" disabled><br/><br/>
+                           当前已排人员数量: <input id="plan_thisValue" value="" disabled>
+                            <br/>
+                        </div>
+                    <hr/>
+                        <div class="layui-col-md12">
+                            <form class="layui-form">
+
+                                医院列表:<div class="layui-col-md12" id="per_hosps">
+
+                                </div>
+                                <br/>
+                                日程列表:
+                                <div class="layui-col-md12" id="per_date">
+
+                                </div>
+                            </form>
+                        </div>
+                    <hr/>
+                        <div class="layui-col-md12">
+                            <input type="text" id="personCount_input" required lay-verify="required" placeholder="请输入调出人员数量" autocomplete="off" class="layui-input">
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</script>
+
+<!-- 查看已排期的单位人员信息-->
+<script type="text/html" id="show_plan_persons">
+    <div class="layui-card-body">
+        <div class="layui-col-md12">
+            <form class="layui-form">
+                <div class="layui-form-item">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</script>
+
+<script>
+    layui.use('examwork/examplan_schedule_assign', layui.factory('examwork/examplan_schedule_assign'));
+</script>
+
+
+

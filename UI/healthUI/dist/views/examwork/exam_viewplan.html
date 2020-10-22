@@ -1,0 +1,89 @@
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">                            
+            <div class="layui-form layui-form-pane health-query">                            
+                <div class="layui-form-item">
+                    <div class="layui-col-md10">
+                        <label class="layui-form-label">体检批次</label>
+                        <div class="multi-checkbox"  hyd-name="bathname">
+                            <div class="hyd-selected"><span>2019年春季</span></div>
+                            <div><span>2018年春季</span></div>
+                            <div><span>2017年春季</span></div>
+                            <div><span>2016年春季</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-col-md10">
+                        <label class="layui-form-label">体检计划</label>
+                        <div class="multi-checkbox" hyd-name="quotaname">
+                            <div><span hyd-value="1">查看体检项目</span></div>
+                            <div class="hyd-selected"><span hyd-value="2">年度日程安排</span></div>
+                            <div><span hyd-value="3">年度人员名单</span></div>
+                            <div><span hyd-value="4">体检须知</span></div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md2">
+                        <div>
+                            <span>
+                                <button type="button" class="layui-btn" lay-filter="" id="hyd_exam_toexcelAll">
+                                    <i class="layui-icon layui-icon-table"></i>导出所有表格
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="exam-plan-report-dymic">
+        
+        
+    </div>
+    <div class="layui-card"></div>
+</div>
+<script type="text/html" id="area-exam-plan">
+    <div class="layui-card" >
+    {{# 
+        layui.each(d.data, function(hospitalIndex, hospitalItem){
+    }}
+    
+    <div class="layui-card-body layui-col-md12" style="background-color:#fff;">
+        <div class="layui-form-pane layui-col-md12">
+            <div class="layui-col-md12">{{ hospitalItem.hospitalName || '' }}</div>
+            <div class="layui-col-md12">{{ hospitalItem.hospitalAddress || '' }}</div>
+        </div>
+        {{# 
+            layui.each(hospitalItem.levelData, function(levelIndex, levelItem){
+        }}
+        <div class="layui-col-md6 hyd-col-padding10">
+            <div class="health-table-default"
+                id="div-viewplan-{{ hospitalItem.hospitalCode }}-{{ levelItem.levelCode }}">
+                    <table lay-size="sm" class="layui-table" 
+                    id="tb-viewplan-{{ hospitalItem.hospitalCode }}-{{ levelItem.levelCode }}"
+                    lay-filter="tb-viewplan-{{ hospitalItem.hospitalCode }}-{{ levelItem.levelCode }}">
+                    </table>
+            </div>
+            <div class="layui-col-md12">
+                <button type="button" class="layui-btn" lay-filter="" id="hyd_exam_toexcel">
+                    <i class="layui-icon layui-icon-table"></i>导出Excel
+                </button>
+            </div>
+        </div>
+        {{# 
+            }); 
+        }}
+    </div>
+    
+    {{# 
+        }); 
+    }}
+    </div>
+</script>
+<script>
+layui.use('examwork/exam_viewplan', layui.factory('examwork/exam_viewplan'));
+</script>
+
+
+

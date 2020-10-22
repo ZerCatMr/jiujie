@@ -1,0 +1,174 @@
+<script type="text/html" template>
+  <link rel="stylesheet" href="{{ layui.setter.base }}style/{{ layui.cache.project }}-base.css?v={{ layui.admin.v }}-1"
+    media="all">
+</script>
+
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <!-- 头部区域 -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item layadmin-flexible" lay-unselect>
+        <a href="javascript:;" layadmin-event="flexible" title="侧边伸缩">
+          <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i>
+        </a>
+      </li>
+      <li class="layui-nav-item" lay-unselect>
+        <a href="javascript:;" layadmin-event="refresh" title="刷新">
+          <i class="layui-icon layui-icon-refresh-3"></i>
+        </a>
+      </li>
+      <li class="layui-nav-item layui-hide-xs" lay-unselect>
+        <a href="javascript:;" layadmin-event="fullscreen">
+          <i class="layui-icon layui-icon-screen-full"></i>
+        </a>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right" lay-filter="layadmin-layout-right">
+
+      <li class="layui-nav-item" lay-unselect  id="organbox" lay-filter="organbox" >
+        <script type="text/html" template>
+          {{ JSON.parse(sessionStorage.getItem("health-login-cache")).organName }}
+        </script>
+      </li>
+
+      <li class="layui-nav-item" lay-unselect style="background-image: image('/favicon.ico')" id="rolebox" lay-filter="rolebox" >
+        <script type="text/html" template >
+            {{#
+            var userdata  = JSON.parse(sessionStorage.getItem("health-login-cache"));
+            /**
+            * 获取local中的tab页签切换下标
+            */
+            }}
+            <a href="javascript:">{{userdata.roleName}}</a>
+            <dl class="layui-nav-child" id="hyd-Role-child">
+                {{#  layui.each(userdata.roleDOList, function(index, item){ }}
+                <dd><a  lay-role="" href="javascript:"  value={{index}} >{{ item.roleName }}</a></dd>
+                {{#  }); }}
+            </dl>
+        </script>
+          
+      </li>
+      <li class="layui-nav-item layui-hide-xs" lay-unselect="" id="message" lay-filter="message">
+      </li>
+
+
+
+      <li class="layui-nav-item">
+        <script type="text/html" template lay-done="layui.element.render('nav', 'layadmin-layout-right');">
+          <a href="javascript:;">
+
+
+            <cite>{{ JSON.parse(sessionStorage.getItem("health-login-cache")).userName }}</cite>
+<!--            layui.data('health').userinfo.UserName-->
+          </a>
+          <dl class="layui-nav-child">
+            <!-- 右上角下拉菜单 -->
+            <dd layadmin-event="passWord" style="text-align: center;"><a>修改密码</a></dd>
+            <dd layadmin-event="logout" style="text-align: center;"><a>退出</a></dd>
+          </dl>
+        </script>
+      </li>
+
+    </ul>
+  </div>
+
+  <!-- 侧边菜单 -->
+  <div class="layui-side layui-side-menu" id="TPL_menu">
+    <script type="text/html" template >
+            <div class="layui-logo" lay-href="">
+                <span id="hyd_user_info">{{ layui.setter.name || 'layuiAdmin' }}</span>
+            </div>
+            <div class="layui-tab layui-tab-brief" style="margin-top:50px;" lay-filter="TabBrief">
+                <div class="layui-tab-content" style="padding: 0px;">
+                    <ul class="layui-nav layui-nav-tree" style="margin-top: 0px;"
+                        lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+                        {{#
+                            var menuData="";
+                            var loginData = JSON.parse(sessionStorage.getItem("health-login-cache"));
+                            var loginAccount=loginData.loginAccount;
+
+                            $.each(loginData.roleDOList,function (index,value) {
+                                if(value.loginaccount==loginAccount){
+                                menuData=value.menuVOS
+                                }
+                            })
+                        }}
+
+                        {{#   $.each(menuData, function (index, value) {
+                                    var data = menuData[index];
+                                    var parentList = data.menuList;
+                        }}
+                        <li data-name={{ data.name }} class="layui-nav-item" data-jump={{ data.id }}>
+                            <a  href="javascript:;"  lay-tips={{ data.name }} lay-direction="2" class="hyd-a-hover">
+                                <i class="iconfont icon-jigouguanliicon_"></i>
+                                <cite>{{ data.name }}</cite>
+                                <span class="layui-nav-more">
+                          </span>
+                            </a>
+
+                            <dl class="layui-nav-child">
+                                {{#   $.each(parentList, function (ins, vas) {  }}
+                                <dd data-name={{ parentList[ins].name }} data-jump={{ parentList[ins].id }} class=""> <dd><a  href="javascript:;"  class="hyd-a-hover" lay-href={{ parentList[ins].menuSrc+'/title='+parentList[ins].name }}>{{ parentList[ins].name }}</a></dd> </dd>
+                                {{#    })   }}
+                            </dl>
+                        </li>
+                        {{#  });  }}
+                        <span class="layui-nav-bar" style="top: 178.5px; height: 0px; opacity: 0;"></span>
+                    </ul>
+                </div>
+            </div>
+      </script>
+  </div>
+
+
+
+
+  <!-- 页面标签 -->
+  <script type="text/html" template lay-done="layui.element.render('nav', 'layadmin-pagetabs-nav')">
+    {{# if(layui.setter.pageTabs){ }}
+    <div class="layadmin-pagetabs" id="LAY_app_tabs">
+      <div class="layui-icon layadmin-tabs-control layui-icon-prev" layadmin-event="leftPage"></div>
+      <div class="layui-icon layadmin-tabs-control layui-icon-next" layadmin-event="rightPage"></div>
+      <div class="layui-icon layadmin-tabs-control layui-icon-down">
+        <ul class="layui-nav layadmin-tabs-select" lay-filter="layadmin-pagetabs-nav">
+          <li class="layui-nav-item" lay-unselect>
+            <a href="javascript:;"></a>
+            <dl class="layui-nav-child layui-anim-fadein">
+              <dd layadmin-event="closeThisTabs"><a href="javascript:;">关闭当前标签页</a></dd>
+              <dd layadmin-event="closeOtherTabs"><a href="javascript:;">关闭其它标签页</a></dd>
+              <dd layadmin-event="closeAllTabs"><a href="javascript:;">关闭全部标签页</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <div class="layui-tab" lay-unauto lay-allowClose="true" lay-filter="layadmin-layout-tabs">
+        <ul class="layui-tab-title" id="LAY_app_tabsheader">
+          <li lay-id="/"><span>首页</span></li>
+        </ul>
+      </div>
+    </div>
+    {{# } }}
+  </script>
+
+
+  <!-- 主体内容 -->
+  <div class="layui-body" id="LAY_app_body">
+    <div class="layadmin-tabsbody-item layui-show"></div>
+  </div>
+
+  <!-- 辅助元素，一般用于移动设备下遮罩 -->
+  <div class="layadmin-body-shade" layadmin-event="shade"></div>
+
+
+</div>
+
+
+<style>
+  .layui-nav.layui-layout-right li {
+    margin: 0px 20px;
+  }
+</style>
+
+
+
+

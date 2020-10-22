@@ -1,0 +1,109 @@
+<!--体检疾病统计页面-->
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">                            
+            <div class="layui-form layui-form-pane health-query">                            
+                <div class="layui-form-item">
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">体检批次</label>
+                        <div class="multi-checkbox"  hyd-name="bathname" id="hyd_exam_bathname">
+                            <div class="hyd-selected"><span>2019年春季</span></div>
+                            <div><span>2018年春季</span></div>
+                            <div><span>2017年春季</span></div>
+                            <div><span>2016年春季</span></div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">体检医院</label>
+                        <div class="multi-checkbox" id="hyd_exam_hospitalnam">
+                            <div><span>四川大学华西医院</span></div>
+                            <div><span>四川省人民医院</span></div>
+                            <div><span>四川省肿瘤医院</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">机构性质</label>
+                        <div class="multi-checkbox" id="hyd_exam_orgtype">
+                            <div><span>省级机关</span></div>
+                            <div><span>省级事业单位</span></div>
+                            <div><span>市州</span></div>
+                            <div><span>其它</span></div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">人员类型</label>
+                        <div class="multi-checkbox" id="hyd_exam_type">
+                            <div><span>在职</span></div>
+                            <div><span>离休</span></div>
+                            <div><span>退休</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="layui-form-item">
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">医疗待遇</label>
+                        <div class="multi-checkbox" id="hyd_exam_treat">
+                            <div><span>省级</span></div>
+                            <div><span>厅级</span></div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <label class="layui-form-label">待遇类型</label>
+                        <div class="multi-checkbox" id="hyd_exam_treattype">
+                            <div><span>实职</span></div>
+                            <div><span>享受待遇</span></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="layui-form-item">
+                    <div>
+                        <label class="layui-form-label">人员级别</label>
+                        <div class="layui-col-md8 multi-checkbox" id="hyd_exam_levl">
+                            <div><span>在职省领导</span></div>
+                            <div><span>离退休正省级实职领导</span></div>
+                            <div><span>离退休副省级实职领导</span></div>
+                            <div><span>享受省级待遇离休干部</span></div>
+                            <div><span>两院院士</span></div>
+                            <div><span>省直机关正厅实职领导</span></div>
+                            <div><span>省直机关副厅实职领导</span></div>
+                            <div><span>省直机关在职正巡视员</span></div>
+                            <div><span>省直机关在职副巡视员</span></div>
+                            <div><span>离退休厅级领导</span></div>
+                            <div><span>市州正厅实职领导</span></div>
+                            <div><span>其它</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn" id="query_illnum">
+                        <i class="layui-icon layui-icon-search">查询</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search"  placeholder="过滤"/>
+            <i class="layui-icon layui-icon-search"></i>
+        </div>
+        <div class="health-right">
+            <button type="button" class="layui-btn" id="#hyd_examina_toexcel">
+                    <i class="layui-icon layui-icon-table">导出Excel</i>
+            </button>
+        </div>
+    </div>
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="illnumtb" lay-filter="illnumtb"></table>
+    </div>
+</div>
+<script>
+layui.use('report/illnum', layui.factory('report/illnum'));
+</script>
+
+
+

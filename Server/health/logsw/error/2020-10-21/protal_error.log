@@ -1,0 +1,3488 @@
+{conn-10005, pstmt-20000} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} Parameters : [wst006, 123456]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [wst006, 123456]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 12.5346 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} executed. 12.7325 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} Parameters : [wst006]
+{conn-10005, pstmt-20001} Types : [VARCHAR]
+{conn-10005, pstmt-20001} Parameters : [wst006]
+{conn-10005, pstmt-20001} Types : [VARCHAR]
+{conn-10005, pstmt-20001} executed. 11.0296 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} executed. 11.1459 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20002} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} Parameters : [wst006]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} Parameters : [wst006]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} executed. 11.0966 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} executed. 11.2174 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20003} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} Parameters : [wst006]
+{conn-10005, pstmt-20003} Types : [VARCHAR]
+{conn-10005, pstmt-20003} Parameters : [wst006]
+{conn-10005, pstmt-20003} Types : [VARCHAR]
+{conn-10005, pstmt-20003} executed. 11.9108 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} executed. 12.1884 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20002} Parameters : [HUser000000002]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} Parameters : [HUser000000002]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} executed. 12.0006 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} executed. 12.2105 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20004} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} Parameters : [wst006]
+{conn-10005, pstmt-20004} Types : [VARCHAR]
+{conn-10005, pstmt-20004} Parameters : [wst006]
+{conn-10005, pstmt-20004} Types : [VARCHAR]
+{conn-10005, pstmt-20004} executed. 11.5389 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} executed. 11.7541 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} clearParameters. 
+{conn-10005, pstmt-20004} clearParameters. 
+{conn-10005, pstmt-20005} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} Parameters : [examadmin]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} Parameters : [examadmin]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} executed. 15.6494 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} executed. 15.7781 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20005} Parameters : [adminleader]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} Parameters : [adminleader]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} executed. 11.9343 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} executed. 12.1615 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20006} created. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20006} created. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20006} Parameters : []
+{conn-10005, pstmt-20006} Types : []
+{conn-10005, pstmt-20006} Parameters : []
+{conn-10005, pstmt-20006} Types : []
+{conn-10005, pstmt-20006} executed. 9.748 millis. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20006} executed. 9.8613 millis. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20007} created. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20007} created. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20007} Parameters : []
+{conn-10005, pstmt-20007} Types : []
+{conn-10005, pstmt-20007} Parameters : []
+{conn-10005, pstmt-20007} Types : []
+{conn-10005, pstmt-20007} executed. 12.1739 millis. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20007} executed. 12.3178 millis. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20007} clearParameters. 
+{conn-10005, pstmt-20007} clearParameters. 
+{conn-10005, pstmt-20008} created. UPDATE basic_hospital
+  SET status = ?  where hospid = ?
+{conn-10005, pstmt-20008} created. UPDATE basic_hospital
+  SET status = ?  where hospid = ?
+{conn-10005, pstmt-20008} Parameters : [1, sc2peopsn]
+{conn-10005, pstmt-20008} Types : [INTEGER, VARCHAR]
+{conn-10005, pstmt-20008} Parameters : [1, sc2peopsn]
+{conn-10005, pstmt-20008} Types : [INTEGER, VARCHAR]
+{conn-10005, pstmt-20008} executed. 35.5308 millis. UPDATE basic_hospital
+  SET status = ?  where hospid = ?
+{conn-10005, pstmt-20008} executed. 35.6415 millis. UPDATE basic_hospital
+  SET status = ?  where hospid = ?
+{conn-10005, pstmt-20008} clearParameters. 
+{conn-10005, pstmt-20008} clearParameters. 
+{conn-10005, pstmt-20007} Parameters : []
+{conn-10005, pstmt-20007} Types : []
+{conn-10005, pstmt-20007} Parameters : []
+{conn-10005, pstmt-20007} Types : []
+{conn-10005, pstmt-20007} executed. 10.6288 millis. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20007} executed. 10.7322 millis. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20007} clearParameters. 
+{conn-10005, pstmt-20007} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : []
+{conn-10005, pstmt-20006} Types : []
+{conn-10005, pstmt-20006} Parameters : []
+{conn-10005, pstmt-20006} Types : []
+{conn-10005, pstmt-20006} executed. 9.9523 millis. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20006} executed. 10.0604 millis. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10006, pstmt-20000} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10006, pstmt-20000} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10006, pstmt-20000} Parameters : [wst006, 123456]
+{conn-10006, pstmt-20000} Types : [VARCHAR, VARCHAR]
+{conn-10006, pstmt-20000} Parameters : [wst006, 123456]
+{conn-10006, pstmt-20000} Types : [VARCHAR, VARCHAR]
+{conn-10006, pstmt-20000} executed. 17.116499 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10006, pstmt-20000} executed. 17.2748 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10006, pstmt-20000} clearParameters. 
+{conn-10006, pstmt-20000} clearParameters. 
+{conn-10006, pstmt-20001} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10006, pstmt-20001} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10006, pstmt-20001} Parameters : [wst006]
+{conn-10006, pstmt-20001} Types : [VARCHAR]
+{conn-10006, pstmt-20001} Parameters : [wst006]
+{conn-10006, pstmt-20001} Types : [VARCHAR]
+{conn-10006, pstmt-20001} executed. 12.556599 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10006, pstmt-20001} executed. 12.6762 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10006, pstmt-20001} clearParameters. 
+{conn-10006, pstmt-20001} clearParameters. 
+{conn-10006, pstmt-20002} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10006, pstmt-20002} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10006, pstmt-20002} Parameters : [wst006]
+{conn-10006, pstmt-20002} Types : [VARCHAR]
+{conn-10006, pstmt-20002} Parameters : [wst006]
+{conn-10006, pstmt-20002} Types : [VARCHAR]
+{conn-10006, pstmt-20002} executed. 10.7838 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10006, pstmt-20002} executed. 10.9068 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10006, pstmt-20002} clearParameters. 
+{conn-10006, pstmt-20002} clearParameters. 
+{conn-10006, pstmt-20003} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10006, pstmt-20003} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10006, pstmt-20003} Parameters : [wst006]
+{conn-10006, pstmt-20003} Types : [VARCHAR]
+{conn-10006, pstmt-20003} Parameters : [wst006]
+{conn-10006, pstmt-20003} Types : [VARCHAR]
+{conn-10006, pstmt-20003} executed. 10.452401 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10006, pstmt-20003} executed. 10.582801 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10006, pstmt-20003} clearParameters. 
+{conn-10006, pstmt-20003} clearParameters. 
+{conn-10006, pstmt-20002} Parameters : [HUser000000002]
+{conn-10006, pstmt-20002} Types : [VARCHAR]
+{conn-10006, pstmt-20002} Parameters : [HUser000000002]
+{conn-10006, pstmt-20002} Types : [VARCHAR]
+{conn-10006, pstmt-20002} executed. 10.8003 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10006, pstmt-20002} executed. 10.988199 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10006, pstmt-20002} clearParameters. 
+{conn-10006, pstmt-20002} clearParameters. 
+{conn-10006, pstmt-20004} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10006, pstmt-20004} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10006, pstmt-20004} Parameters : [wst006]
+{conn-10006, pstmt-20004} Types : [VARCHAR]
+{conn-10006, pstmt-20004} Parameters : [wst006]
+{conn-10006, pstmt-20004} Types : [VARCHAR]
+{conn-10006, pstmt-20004} executed. 10.6877 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10006, pstmt-20004} executed. 10.8265 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10006, pstmt-20004} clearParameters. 
+{conn-10006, pstmt-20004} clearParameters. 
+{conn-10006, pstmt-20005} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10006, pstmt-20005} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10006, pstmt-20005} Parameters : [examadmin]
+{conn-10006, pstmt-20005} Types : [VARCHAR]
+{conn-10006, pstmt-20005} Parameters : [examadmin]
+{conn-10006, pstmt-20005} Types : [VARCHAR]
+{conn-10006, pstmt-20005} executed. 14.7509 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10006, pstmt-20005} executed. 14.8896 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10006, pstmt-20005} clearParameters. 
+{conn-10006, pstmt-20005} clearParameters. 
+{conn-10006, pstmt-20005} Parameters : [adminleader]
+{conn-10006, pstmt-20005} Types : [VARCHAR]
+{conn-10006, pstmt-20005} Parameters : [adminleader]
+{conn-10006, pstmt-20005} Types : [VARCHAR]
+{conn-10006, pstmt-20005} executed. 11.090799 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10006, pstmt-20005} executed. 11.3337 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10006, pstmt-20005} clearParameters. 
+{conn-10006, pstmt-20005} clearParameters. 
+{conn-10008, pstmt-20006} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10008, pstmt-20006} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10008, pstmt-20006} Parameters : [0]
+{conn-10008, pstmt-20006} Types : [INTEGER]
+{conn-10008, pstmt-20006} Parameters : [0]
+{conn-10008, pstmt-20006} Types : [INTEGER]
+{conn-10008, pstmt-20006} executed. 33.7952 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10008, pstmt-20006} executed. 33.9431 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10008, pstmt-20006} clearParameters. 
+{conn-10008, pstmt-20006} clearParameters. 
+{conn-10009, pstmt-20007} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 20.82 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 20.924099 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 55.738501 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 55.835901 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [3]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [3]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 23.5443 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 23.660301 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 37.981 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 38.0942 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 29.065801 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 29.196201 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 34.3059 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 34.410599 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 28.8199 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 29.3186 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 39.3258 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 39.436 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [3]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [3]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 23.371301 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 23.474001 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 32.665101 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 32.811901 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 27.3136 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 27.5123 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 73.5781 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 73.6876 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 25.145899 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 25.2468 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 51.1911 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 51.303 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 28.9765 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 29.3065 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 37.2324 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 37.3355 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [3]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [3]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 43.501701 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 43.605101 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 49.9512 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 50.052601 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [1]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 28.7781 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 29.0578 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 32.9012 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 33.0567 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [0]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [0]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 159.6425 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 159.8355 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [3]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [3]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 21.644701 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 21.780601 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} Parameters : [2]
+{conn-10009, pstmt-20007} Types : [INTEGER]
+{conn-10009, pstmt-20007} executed. 36.700901 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} executed. 36.811701 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10009, pstmt-20007} clearParameters. 
+{conn-10010, pstmt-20008} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10010, pstmt-20008} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10010, pstmt-20008} Parameters : [wst006, 123456]
+{conn-10010, pstmt-20008} Types : [VARCHAR, VARCHAR]
+{conn-10010, pstmt-20008} Parameters : [wst006, 123456]
+{conn-10010, pstmt-20008} Types : [VARCHAR, VARCHAR]
+{conn-10010, pstmt-20008} executed. 11.8976 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10010, pstmt-20008} executed. 12.0336 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10010, pstmt-20008} clearParameters. 
+{conn-10010, pstmt-20008} clearParameters. 
+{conn-10010, pstmt-20009} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10010, pstmt-20009} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10010, pstmt-20009} Parameters : [wst006]
+{conn-10010, pstmt-20009} Types : [VARCHAR]
+{conn-10010, pstmt-20009} Parameters : [wst006]
+{conn-10010, pstmt-20009} Types : [VARCHAR]
+{conn-10010, pstmt-20009} executed. 10.7438 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10010, pstmt-20009} executed. 10.8611 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10010, pstmt-20009} clearParameters. 
+{conn-10010, pstmt-20009} clearParameters. 
+{conn-10010, pstmt-20010} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10010, pstmt-20010} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10010, pstmt-20010} Parameters : [wst006]
+{conn-10010, pstmt-20010} Types : [VARCHAR]
+{conn-10010, pstmt-20010} Parameters : [wst006]
+{conn-10010, pstmt-20010} Types : [VARCHAR]
+{conn-10010, pstmt-20010} executed. 13.1321 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10010, pstmt-20010} executed. 13.348 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10010, pstmt-20010} clearParameters. 
+{conn-10010, pstmt-20010} clearParameters. 
+{conn-10010, pstmt-20011} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10010, pstmt-20011} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10010, pstmt-20011} Parameters : [wst006]
+{conn-10010, pstmt-20011} Types : [VARCHAR]
+{conn-10010, pstmt-20011} Parameters : [wst006]
+{conn-10010, pstmt-20011} Types : [VARCHAR]
+{conn-10010, pstmt-20011} executed. 10.3433 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10010, pstmt-20011} executed. 10.445 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10010, pstmt-20011} clearParameters. 
+{conn-10010, pstmt-20011} clearParameters. 
+{conn-10010, pstmt-20010} Parameters : [HUser000000002]
+{conn-10010, pstmt-20010} Types : [VARCHAR]
+{conn-10010, pstmt-20010} Parameters : [HUser000000002]
+{conn-10010, pstmt-20010} Types : [VARCHAR]
+{conn-10010, pstmt-20010} executed. 9.8458 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10010, pstmt-20010} executed. 9.9395 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10010, pstmt-20010} clearParameters. 
+{conn-10010, pstmt-20010} clearParameters. 
+{conn-10010, pstmt-20012} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10010, pstmt-20012} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10010, pstmt-20012} Parameters : [wst006]
+{conn-10010, pstmt-20012} Types : [VARCHAR]
+{conn-10010, pstmt-20012} Parameters : [wst006]
+{conn-10010, pstmt-20012} Types : [VARCHAR]
+{conn-10010, pstmt-20012} executed. 10.1102 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10010, pstmt-20012} executed. 10.1989 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10010, pstmt-20012} clearParameters. 
+{conn-10010, pstmt-20012} clearParameters. 
+{conn-10010, pstmt-20013} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10010, pstmt-20013} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10010, pstmt-20013} Parameters : [examadmin]
+{conn-10010, pstmt-20013} Types : [VARCHAR]
+{conn-10010, pstmt-20013} Parameters : [examadmin]
+{conn-10010, pstmt-20013} Types : [VARCHAR]
+{conn-10010, pstmt-20013} executed. 10.6433 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10010, pstmt-20013} executed. 10.896599 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10010, pstmt-20013} clearParameters. 
+{conn-10010, pstmt-20013} clearParameters. 
+{conn-10010, pstmt-20013} Parameters : [adminleader]
+{conn-10010, pstmt-20013} Types : [VARCHAR]
+{conn-10010, pstmt-20013} Parameters : [adminleader]
+{conn-10010, pstmt-20013} Types : [VARCHAR]
+{conn-10010, pstmt-20013} executed. 11.3969 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10010, pstmt-20013} executed. 11.521 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10010, pstmt-20013} clearParameters. 
+{conn-10010, pstmt-20013} clearParameters. 
+{conn-10011, pstmt-20014} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10011, pstmt-20014} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10011, pstmt-20014} Parameters : [1]
+{conn-10011, pstmt-20014} Types : [INTEGER]
+{conn-10011, pstmt-20014} Parameters : [1]
+{conn-10011, pstmt-20014} Types : [INTEGER]
+{conn-10011, pstmt-20014} executed. 25.7844 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10011, pstmt-20014} executed. 26.1305 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10011, pstmt-20014} clearParameters. 
+{conn-10011, pstmt-20014} clearParameters. 
+{conn-10011, pstmt-20014} Parameters : [2]
+{conn-10011, pstmt-20014} Types : [INTEGER]
+{conn-10011, pstmt-20014} Parameters : [2]
+{conn-10011, pstmt-20014} Types : [INTEGER]
+{conn-10011, pstmt-20014} executed. 44.3102 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10011, pstmt-20014} executed. 44.4408 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10011, pstmt-20014} clearParameters. 
+{conn-10011, pstmt-20014} clearParameters. 
+{conn-10012, pstmt-20015} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10012, pstmt-20015} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10012, pstmt-20015} Parameters : [wst006, 123456]
+{conn-10012, pstmt-20015} Types : [VARCHAR, VARCHAR]
+{conn-10012, pstmt-20015} Parameters : [wst006, 123456]
+{conn-10012, pstmt-20015} Types : [VARCHAR, VARCHAR]
+{conn-10012, pstmt-20015} executed. 22.3633 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10012, pstmt-20015} executed. 22.5698 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10012, pstmt-20015} clearParameters. 
+{conn-10012, pstmt-20015} clearParameters. 
+{conn-10012, pstmt-20016} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10012, pstmt-20016} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10012, pstmt-20016} Parameters : [wst006]
+{conn-10012, pstmt-20016} Types : [VARCHAR]
+{conn-10012, pstmt-20016} Parameters : [wst006]
+{conn-10012, pstmt-20016} Types : [VARCHAR]
+{conn-10012, pstmt-20016} executed. 13.2794 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10012, pstmt-20016} executed. 13.3721 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10012, pstmt-20016} clearParameters. 
+{conn-10012, pstmt-20016} clearParameters. 
+{conn-10012, pstmt-20017} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10012, pstmt-20017} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10012, pstmt-20017} Parameters : [wst006]
+{conn-10012, pstmt-20017} Types : [VARCHAR]
+{conn-10012, pstmt-20017} Parameters : [wst006]
+{conn-10012, pstmt-20017} Types : [VARCHAR]
+{conn-10012, pstmt-20017} executed. 11.035299 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10012, pstmt-20017} executed. 11.279399 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10012, pstmt-20017} clearParameters. 
+{conn-10012, pstmt-20017} clearParameters. 
+{conn-10012, pstmt-20018} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10012, pstmt-20018} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10012, pstmt-20018} Parameters : [wst006]
+{conn-10012, pstmt-20018} Types : [VARCHAR]
+{conn-10012, pstmt-20018} Parameters : [wst006]
+{conn-10012, pstmt-20018} Types : [VARCHAR]
+{conn-10012, pstmt-20018} executed. 15.356 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10012, pstmt-20018} executed. 15.4393 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10012, pstmt-20018} clearParameters. 
+{conn-10012, pstmt-20018} clearParameters. 
+{conn-10012, pstmt-20017} Parameters : [HUser000000002]
+{conn-10012, pstmt-20017} Types : [VARCHAR]
+{conn-10012, pstmt-20017} Parameters : [HUser000000002]
+{conn-10012, pstmt-20017} Types : [VARCHAR]
+{conn-10012, pstmt-20017} executed. 10.2793 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10012, pstmt-20017} executed. 10.3532 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10012, pstmt-20017} clearParameters. 
+{conn-10012, pstmt-20017} clearParameters. 
+{conn-10012, pstmt-20019} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10012, pstmt-20019} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10012, pstmt-20019} Parameters : [wst006]
+{conn-10012, pstmt-20019} Types : [VARCHAR]
+{conn-10012, pstmt-20019} Parameters : [wst006]
+{conn-10012, pstmt-20019} Types : [VARCHAR]
+{conn-10012, pstmt-20019} executed. 11.5776 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10012, pstmt-20019} executed. 11.686 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10012, pstmt-20019} clearParameters. 
+{conn-10012, pstmt-20019} clearParameters. 
+{conn-10012, pstmt-20020} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10012, pstmt-20020} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10012, pstmt-20020} Parameters : [examadmin]
+{conn-10012, pstmt-20020} Types : [VARCHAR]
+{conn-10012, pstmt-20020} Parameters : [examadmin]
+{conn-10012, pstmt-20020} Types : [VARCHAR]
+{conn-10012, pstmt-20020} executed. 17.1272 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10012, pstmt-20020} executed. 17.3297 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10012, pstmt-20020} clearParameters. 
+{conn-10012, pstmt-20020} clearParameters. 
+{conn-10012, pstmt-20020} Parameters : [adminleader]
+{conn-10012, pstmt-20020} Types : [VARCHAR]
+{conn-10012, pstmt-20020} Parameters : [adminleader]
+{conn-10012, pstmt-20020} Types : [VARCHAR]
+{conn-10012, pstmt-20020} executed. 18.8503 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10012, pstmt-20020} executed. 18.9332 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10012, pstmt-20020} clearParameters. 
+{conn-10012, pstmt-20020} clearParameters. 
+{conn-10013, pstmt-20021} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10013, pstmt-20021} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10013, pstmt-20021} Parameters : [1]
+{conn-10013, pstmt-20021} Types : [INTEGER]
+{conn-10013, pstmt-20021} Parameters : [1]
+{conn-10013, pstmt-20021} Types : [INTEGER]
+{conn-10013, pstmt-20021} executed. 21.5918 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10013, pstmt-20021} executed. 21.6706 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`
+from  a LEFT join b
+on a.gendercode = b.termid 
+where a.usertype = ?;
+{conn-10013, pstmt-20021} clearParameters. 
+{conn-10013, pstmt-20021} clearParameters. 
+{conn-10005, pstmt-20000} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} created. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 29.9616 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 30.235999 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 42.6421 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 42.7538 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 27.1025 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 27.2271 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 22.836501 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 22.968801 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 35.8955 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 36.0621 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 141.1084 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 141.3926 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 25.416699 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 25.8196 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 34.6909 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 34.7979 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 31.058499 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 31.228399 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 111.904101 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 112.033 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 21.3596 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 21.4743 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 36.811699 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 36.9598 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 24.588201 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 24.718501 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 24.529 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 24.760099 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 65.6175 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 65.7213 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b AS (SELECT * from sys_term),
+c As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,b.termname as gendercode,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,c.organname
+from  a LEFT join b on a.gendercode = b.termid LEFT JOIN c on a.organid = c.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} created. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} created. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 25.8698 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 26.0275 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 43.247601 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 43.3583 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 20.6923 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 20.8096 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 37.8611 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 37.9775 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 28.5308 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 28.8349 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 37.9115 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 38.027099 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 20.3186 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 20.4663 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 38.2708 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 38.3743 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 21.672201 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 21.844201 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 20.778 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 20.987599 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 34.213301 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} executed. 34.328401 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} created. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20001} created. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20001} Parameters : []
+{conn-10005, pstmt-20001} Types : []
+{conn-10005, pstmt-20001} Parameters : []
+{conn-10005, pstmt-20001} Types : []
+{conn-10005, pstmt-20001} executed. 11.105299 millis. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20001} executed. 11.227399 millis. SELECT id,organtype,organname,organid,creatime,lastmodtime from basic_organ
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20002} created. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20002} created. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20002} Parameters : []
+{conn-10005, pstmt-20002} Types : []
+{conn-10005, pstmt-20002} Parameters : []
+{conn-10005, pstmt-20002} Types : []
+{conn-10005, pstmt-20002} executed. 10.482301 millis. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20002} executed. 10.617801 millis. SELECT hospid,hospname,organtype,creatime,lastmodtime,status from basic_hospital
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10006, pstmt-20003} created. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10006, pstmt-20003} created. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10006, pstmt-20003} Parameters : [1]
+{conn-10006, pstmt-20003} Types : [INTEGER]
+{conn-10006, pstmt-20003} Parameters : [1]
+{conn-10006, pstmt-20003} Types : [INTEGER]
+{conn-10006, pstmt-20003} executed. 25.385901 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10006, pstmt-20003} executed. 25.557801 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10006, pstmt-20003} clearParameters. 
+{conn-10006, pstmt-20003} clearParameters. 
+{conn-10007, pstmt-20004} created. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10007, pstmt-20004} created. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10007, pstmt-20004} Parameters : [2]
+{conn-10007, pstmt-20004} Types : [INTEGER]
+{conn-10007, pstmt-20004} Parameters : [2]
+{conn-10007, pstmt-20004} Types : [INTEGER]
+{conn-10007, pstmt-20004} executed. 93.499599 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10007, pstmt-20004} executed. 93.6098 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10007, pstmt-20004} clearParameters. 
+{conn-10007, pstmt-20004} clearParameters. 
+{conn-10007, pstmt-20004} Parameters : [3]
+{conn-10007, pstmt-20004} Types : [INTEGER]
+{conn-10007, pstmt-20004} Parameters : [3]
+{conn-10007, pstmt-20004} Types : [INTEGER]
+{conn-10007, pstmt-20004} executed. 22.920301 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10007, pstmt-20004} executed. 23.0676 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10007, pstmt-20004} clearParameters. 
+{conn-10007, pstmt-20004} clearParameters. 
+{conn-10007, pstmt-20004} Parameters : [0]
+{conn-10007, pstmt-20004} Types : [INTEGER]
+{conn-10007, pstmt-20004} Parameters : [0]
+{conn-10007, pstmt-20004} Types : [INTEGER]
+{conn-10007, pstmt-20004} executed. 21.466999 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10007, pstmt-20004} executed. 21.575399 millis. WITH
+a AS (SELECT * from basic_manageuser),
+b As (SELECT * FROM basic_examorgan)
+SELECT a.manageid,a.loginaccount,a.`name`,a.usertype,a.usertypename,a.phone,a.organid,a.officephone,a.`status`,b.organname
+from  a LEFT join b on a.organid = b.organid
+where a.usertype = ?;
+{conn-10007, pstmt-20004} clearParameters. 
+{conn-10007, pstmt-20004} clearParameters. 
+{conn-10005, pstmt-20000} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 17.803801 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 17.942901 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 32.282 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 32.4811 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 11.2247 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 11.339599 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 104.750601 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 104.947001 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 11.636 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 11.7429 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 11.517299 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 11.6476 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 26.4836 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 26.6067 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 23.745801 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 23.958301 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 27.2138 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 27.435201 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [3]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 11.888299 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 12.023899 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} Parameters : [wst006, 123456]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [wst006, 123456]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 13.6054 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} executed. 13.7332 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} Parameters : [wst006]
+{conn-10005, pstmt-20001} Types : [VARCHAR]
+{conn-10005, pstmt-20001} Parameters : [wst006]
+{conn-10005, pstmt-20001} Types : [VARCHAR]
+{conn-10005, pstmt-20001} executed. 13.387701 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} executed. 13.5445 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20002} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} Parameters : [wst006]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} Parameters : [wst006]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} executed. 11.4446 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} executed. 11.5813 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20003} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} Parameters : [wst006]
+{conn-10005, pstmt-20003} Types : [VARCHAR]
+{conn-10005, pstmt-20003} Parameters : [wst006]
+{conn-10005, pstmt-20003} Types : [VARCHAR]
+{conn-10005, pstmt-20003} executed. 11.0585 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} executed. 11.2146 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20002} Parameters : [HUser000000002]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} Parameters : [HUser000000002]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} executed. 11.3218 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} executed. 11.4957 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20004} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} Parameters : [wst006]
+{conn-10005, pstmt-20004} Types : [VARCHAR]
+{conn-10005, pstmt-20004} Parameters : [wst006]
+{conn-10005, pstmt-20004} Types : [VARCHAR]
+{conn-10005, pstmt-20004} executed. 10.918099 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} executed. 11.052 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} clearParameters. 
+{conn-10005, pstmt-20004} clearParameters. 
+{conn-10005, pstmt-20005} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} Parameters : [examadmin]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} Parameters : [examadmin]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} executed. 12.244099 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} executed. 12.3888 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20005} Parameters : [adminleader]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} Parameters : [adminleader]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} executed. 11.1143 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} executed. 11.2916 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20006} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 11.9264 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 12.044 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 25.3726 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 25.5808 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [3]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [3]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 11.4315 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 11.596599 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 21.5507 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 21.7258 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 23.703201 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 23.813501 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [3]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [3]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 12.0178 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 12.126 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 23.283201 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 23.498 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 15.2145 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 15.3159 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [3]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [3]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 11.1286 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 11.2516 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 13.702901 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 13.931201 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 23.2227 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 23.3462 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 11.189199 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 11.2837 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 12.861901 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 12.976101 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 13.9788 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 14.2309 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 23.5594 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 23.6637 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10006, pstmt-20007} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10006, pstmt-20007} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10006, pstmt-20007} Parameters : [1]
+{conn-10006, pstmt-20007} Types : [INTEGER]
+{conn-10006, pstmt-20007} Parameters : [1]
+{conn-10006, pstmt-20007} Types : [INTEGER]
+{conn-10006, pstmt-20007} executed. 15.7301 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10006, pstmt-20007} executed. 15.9511 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10006, pstmt-20007} clearParameters. 
+{conn-10006, pstmt-20007} clearParameters. 
+{conn-10007, pstmt-20008} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 37.478701 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 37.589501 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 12.6981 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 12.8149 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 22.157301 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 22.267801 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 12.441101 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 12.6416 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 11.8924 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 12.0607 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 24.5373 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 24.7343 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 12.6399 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 12.831 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 24.5426 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 24.7316 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 22.8932 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 23.0051 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 18.877899 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 19.0256 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [2]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 49.040499 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 49.1451 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} Parameters : [1]
+{conn-10007, pstmt-20008} Types : [INTEGER]
+{conn-10007, pstmt-20008} executed. 12.2687 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} executed. 12.3605 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10007, pstmt-20008} clearParameters. 
+{conn-10005, pstmt-20000} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 19.7572 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 19.8897 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 44.288801 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 44.5218 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 11.8231 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 11.9587 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [2]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 30.662001 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 30.796701 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 11.471 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 11.602099 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 12.8254 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 12.9359 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 11.775099 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 11.988399 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 12.580099 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 12.9659 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} Parameters : [1]
+{conn-10005, pstmt-20000} Types : [INTEGER]
+{conn-10005, pstmt-20000} executed. 12.3562 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} executed. 12.472699 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 张成, 0000000000, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 张成, 0000000000, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 27.5038 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 27.782201 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 11.0243 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 11.134 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 柳文文, 0000000000, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 柳文文, 0000000000, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 34.879899 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 35.046999 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 11.3885 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 11.62 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex002, 柳文文, 0000000000, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex002, 柳文文, 0000000000, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 26.1083 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 26.345699 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 13.4499 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 13.797299 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 柳文文, 0000000000, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 柳文文, 0000000000, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 92.5792 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 92.8319 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 16.3028 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 16.4092 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 柳文文, 13619310103, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 柳文文, 13619310103, , HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 40.6206 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 40.782701 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 13.6657 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 13.78 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 柳文文, 13619310103, 1055937206, HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [YIE丶玖洁, Sex001, 柳文文, 13619310103, 1055937206, HUser000000001]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 23.876299 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 24.0071 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 11.3448 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 11.5114 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20002} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                    usertypename = ?,
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20002} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                    usertypename = ?,
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20002} Parameters : [YIE丶玖洁, 干保办管理员, Sex001, 柳文文, 13619310103, 1055937206, HUser000000001]
+{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20002} Parameters : [YIE丶玖洁, 干保办管理员, Sex001, 柳文文, 13619310103, 1055937206, HUser000000001]
+{conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20002} executed. 42.3591 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                    usertypename = ?,
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20002} executed. 42.4711 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                    usertypename = ?,
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 12.291 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 12.579799 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 25.0422 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 25.141499 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20000} Parameters : [51012519841007002, Sex002, 唐丹, 13551089361, , HUser000000012]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [51012519841007002, Sex002, 唐丹, 13551089361, , HUser000000012]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 28.6055 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 28.7058 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 27.2262 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 27.345399 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 13.061701 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 13.1953 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 11.1676 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 11.3743 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20003} created. update basic_manageuser
+             SET status = ? 
+            where manageid = ?
+{conn-10005, pstmt-20003} created. update basic_manageuser
+             SET status = ? 
+            where manageid = ?
+{conn-10005, pstmt-20003} Parameters : [0, HUser000000001]
+{conn-10005, pstmt-20003} Types : [INTEGER, VARCHAR]
+{conn-10005, pstmt-20003} Parameters : [0, HUser000000001]
+{conn-10005, pstmt-20003} Types : [INTEGER, VARCHAR]
+{conn-10005, pstmt-20003} executed. 32.5673 millis. update basic_manageuser
+             SET status = ? 
+            where manageid = ?
+{conn-10005, pstmt-20003} executed. 32.7953 millis. update basic_manageuser
+             SET status = ? 
+            where manageid = ?
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 13.3806 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 13.4981 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 21.7303 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 22.25 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20003} Parameters : [0, HUser000000002]
+{conn-10005, pstmt-20003} Types : [INTEGER, VARCHAR]
+{conn-10005, pstmt-20003} Parameters : [0, HUser000000002]
+{conn-10005, pstmt-20003} Types : [INTEGER, VARCHAR]
+{conn-10005, pstmt-20003} executed. 109.508101 millis. update basic_manageuser
+             SET status = ? 
+            where manageid = ?
+{conn-10005, pstmt-20003} executed. 109.7403 millis. update basic_manageuser
+             SET status = ? 
+            where manageid = ?
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 111.733001 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 111.876401 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 25.6683 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 25.775 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 14.2439 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 14.348099 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 27.929199 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 28.032 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20003} Parameters : [0, LUser0000009]
+{conn-10005, pstmt-20003} Types : [INTEGER, VARCHAR]
+{conn-10005, pstmt-20003} Parameters : [0, LUser0000009]
+{conn-10005, pstmt-20003} Types : [INTEGER, VARCHAR]
+{conn-10005, pstmt-20003} executed. 26.5324 millis. update basic_manageuser
+             SET status = ? 
+            where manageid = ?
+{conn-10005, pstmt-20003} executed. 26.6393 millis. update basic_manageuser
+             SET status = ? 
+            where manageid = ?
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [2]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 24.5461 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 24.6567 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} Parameters : [1]
+{conn-10005, pstmt-20001} Types : [INTEGER]
+{conn-10005, pstmt-20001} executed. 13.0509 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} executed. 13.2561 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20000} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} created. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} Parameters : [wst006, 123456]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [wst006, 123456]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 16.365999 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} executed. 16.5118 millis. select id from basic_login_account where loginaccount = ? and loginpass = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} created. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} Parameters : [wst006]
+{conn-10005, pstmt-20001} Types : [VARCHAR]
+{conn-10005, pstmt-20001} Parameters : [wst006]
+{conn-10005, pstmt-20001} Types : [VARCHAR]
+{conn-10005, pstmt-20001} executed. 15.584899 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} executed. 15.7738 millis. select u.roleid,r.rolename from portal_roleuser u left join  portal_role r on u.roleid=r.roleid  where u.userid=?
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20002} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} created. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} Parameters : [wst006]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} Parameters : [wst006]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} executed. 15.3733 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} executed. 15.5354 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20003} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} created. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} Parameters : [wst006]
+{conn-10005, pstmt-20003} Types : [VARCHAR]
+{conn-10005, pstmt-20003} Parameters : [wst006]
+{conn-10005, pstmt-20003} Types : [VARCHAR]
+{conn-10005, pstmt-20003} executed. 15.1066 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} executed. 15.207301 millis. select r.targetuser,p.roleid from basic_user_related r left join portal_roleuser p on r.targetuser=p.userid  where sourceuser=?
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20003} clearParameters. 
+{conn-10005, pstmt-20002} Parameters : [HUser000000002]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} Parameters : [HUser000000002]
+{conn-10005, pstmt-20002} Types : [VARCHAR]
+{conn-10005, pstmt-20002} executed. 14.587501 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} executed. 14.702401 millis. select * from (select r.*,u.userid from portal_roleuser u left join portal_role r on u.roleid = r.roleid  WHERE u.userid =?)as user left join   (select o.id organid,o.organname organname,m.manageid careuserid,m.loginaccount from basic_organ o left join basic_manageuser m on o.id=m.organid )  as organ on organ.careuserid=user.userid
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20004} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} created. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} Parameters : [wst006]
+{conn-10005, pstmt-20004} Types : [VARCHAR]
+{conn-10005, pstmt-20004} Parameters : [wst006]
+{conn-10005, pstmt-20004} Types : [VARCHAR]
+{conn-10005, pstmt-20004} executed. 13.7132 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} executed. 13.8261 millis. select name FROM basic_manageuser where loginaccount = ?
+{conn-10005, pstmt-20004} clearParameters. 
+{conn-10005, pstmt-20004} clearParameters. 
+{conn-10005, pstmt-20005} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} created. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} Parameters : [examadmin]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} Parameters : [examadmin]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} executed. 16.8657 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} executed. 16.9849 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20005} Parameters : [adminleader]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} Parameters : [adminleader]
+{conn-10005, pstmt-20005} Types : [VARCHAR]
+{conn-10005, pstmt-20005} executed. 15.3524 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} executed. 15.484101 millis. SELECT m.menuid AS id, m.menuname AS name, m.parentId AS parentId, r.resource AS menuSrc FROM portal_resource r, portal_menu m  WHERE r.menuid = m.menuid   AND r.roleid = ?  ORDER BY  m.menusort
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20005} clearParameters. 
+{conn-10005, pstmt-20006} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [1]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 14.4468 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 14.555 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 38.5461 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 38.639999 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20007} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20007} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20007} Parameters : [mikaiyuan, Sex002, 米开元1, 13619310103, , LUser0000009]
+{conn-10005, pstmt-20007} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20007} Parameters : [mikaiyuan, Sex002, 米开元1, 13619310103, , LUser0000009]
+{conn-10005, pstmt-20007} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20007} executed. 31.2136 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20007} executed. 31.3284 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20007} clearParameters. 
+{conn-10005, pstmt-20007} clearParameters. 
+{conn-10005, pstmt-20008} created. update basic_login_account
+             SET loginaccount = ?,
+                
+                
+                
+                    status = ? 
+            where id = ?
+{conn-10005, pstmt-20008} created. update basic_login_account
+             SET loginaccount = ?,
+                
+                
+                
+                    status = ? 
+            where id = ?
+{conn-10005, pstmt-20008} Parameters : [mikaiyuan, 0, LUser0000009]
+{conn-10005, pstmt-20008} Types : [VARCHAR, INTEGER, VARCHAR]
+{conn-10005, pstmt-20008} Parameters : [mikaiyuan, 0, LUser0000009]
+{conn-10005, pstmt-20008} Types : [VARCHAR, INTEGER, VARCHAR]
+{conn-10005, pstmt-20008} executed. 30.519001 millis. update basic_login_account
+             SET loginaccount = ?,
+                
+                
+                
+                    status = ? 
+            where id = ?
+{conn-10005, pstmt-20008} executed. 30.630201 millis. update basic_login_account
+             SET loginaccount = ?,
+                
+                
+                
+                    status = ? 
+            where id = ?
+{conn-10005, pstmt-20008} clearParameters. 
+{conn-10005, pstmt-20008} clearParameters. 
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} Parameters : [2]
+{conn-10005, pstmt-20006} Types : [INTEGER]
+{conn-10005, pstmt-20006} executed. 36.0338 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} executed. 36.210499 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20006} clearParameters. 
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} Parameters : [mikaiyuana, Sex002, 米开元1, 13619310103, , LUser0000009]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [mikaiyuana, Sex002, 米开元1, 13619310103, , LUser0000009]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 36.474901 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 36.637601 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} created. update basic_login_account
+             SET loginaccount = ?,
+                
+                
+                
+                    status = ? 
+            where id = ?
+{conn-10005, pstmt-20001} created. update basic_login_account
+             SET loginaccount = ?,
+                
+                
+                
+                    status = ? 
+            where id = ?
+{conn-10005, pstmt-20001} Parameters : [mikaiyuana, 0, LUser0000009]
+{conn-10005, pstmt-20001} Types : [VARCHAR, INTEGER, VARCHAR]
+{conn-10005, pstmt-20001} Parameters : [mikaiyuana, 0, LUser0000009]
+{conn-10005, pstmt-20001} Types : [VARCHAR, INTEGER, VARCHAR]
+{conn-10005, pstmt-20001} executed. 37.9469 millis. update basic_login_account
+             SET loginaccount = ?,
+                
+                
+                
+                    status = ? 
+            where id = ?
+{conn-10005, pstmt-20001} executed. 38.152101 millis. update basic_login_account
+             SET loginaccount = ?,
+                
+                
+                
+                    status = ? 
+            where id = ?
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20002} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20002} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20002} Parameters : [2]
+{conn-10005, pstmt-20002} Types : [INTEGER]
+{conn-10005, pstmt-20002} Parameters : [2]
+{conn-10005, pstmt-20002} Types : [INTEGER]
+{conn-10005, pstmt-20002} executed. 43.437801 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20002} executed. 43.542 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} Parameters : [mky202016, Sex002, 米开元, 13619310103, , LUser0000009]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [mky202016, Sex002, 米开元, 13619310103, , LUser0000009]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 26.4834 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 26.732699 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} created. update basic_login_account
+             SET loginaccount = ? 
+            where id = ?
+{conn-10005, pstmt-20001} created. update basic_login_account
+             SET loginaccount = ? 
+            where id = ?
+{conn-10005, pstmt-20001} Parameters : [mky202016, LUser0000009]
+{conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20001} Parameters : [mky202016, LUser0000009]
+{conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20001} executed. 90.1305 millis. update basic_login_account
+             SET loginaccount = ? 
+            where id = ?
+{conn-10005, pstmt-20001} executed. 90.3109 millis. update basic_login_account
+             SET loginaccount = ? 
+            where id = ?
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20002} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20002} created. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20002} Parameters : [2]
+{conn-10005, pstmt-20002} Types : [INTEGER]
+{conn-10005, pstmt-20002} Parameters : [2]
+{conn-10005, pstmt-20002} Types : [INTEGER]
+{conn-10005, pstmt-20002} executed. 113.348 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20002} executed. 113.5108 millis. SELECT manageid,loginaccount,gendercode,`name`,usertype,usertypename,phone,organid,officephone,`status`
+from basic_manageuser 
+where  usertype = ? ;
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20002} clearParameters. 
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} created. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} Parameters : [mky202010222, Sex002, 米开元, 13619310103, , LUser0000009]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} Parameters : [mky202010222, Sex002, 米开元, 13619310103, , LUser0000009]
+{conn-10005, pstmt-20000} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+{conn-10005, pstmt-20000} executed. 37.4894 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} executed. 37.669401 millis. update basic_manageuser
+             SET loginaccount = ?,
+                
+                
+                
+                    gendercode = ?,
+                
+                
+                    name = ?,
+                
+                
+                    phone = ?,
+                
+                
+                    officephone = ? 
+            where manageid = ?
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20000} clearParameters. 
+{conn-10005, pstmt-20001} created. update basic_login_account
+             SET loginaccount = ? 
+            where id = ?
+{conn-10005, pstmt-20001} created. update basic_login_account
+             SET loginaccount = ? 
+            where id = ?
+{conn-10005, pstmt-20001} Parameters : [mky202010222, LUser0000009]
+{conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20001} Parameters : [mky202010222, LUser0000009]
+{conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+{conn-10005, pstmt-20001} executed. 23.258301 millis. update basic_login_account
+             SET loginaccount = ? 
+            where id = ?
+{conn-10005, pstmt-20001} executed. 23.3773 millis. update basic_login_account
+             SET loginaccount = ? 
+            where id = ?
+{conn-10005, pstmt-20001} clearParameters. 
+{conn-10005, pstmt-20001} clearParameters. 

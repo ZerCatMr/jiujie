@@ -1,0 +1,26 @@
+<!--指定体检套餐/查看体检套餐-->
+<div class="layui-fluid" id="examwork_assignexamsetmeal_view">
+    <div class="layui-card">
+        <div class="layui-col-md12">
+            <div class="layui-col-md8">
+                <div class="health-toolbar">
+                    <div class="layui-form-item">
+                    </div>
+                    <div class="health-filter health-filter-input">
+                        <input type="text" name="health-search"  placeholder="过滤"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="health-table-default">
+            <table lay-size="sm" class="layui-table" id="examworkassignexamsetmealview" lay-filter="examworkassignexamsetmealview"></table>
+        </div>
+    </div>
+</div>
+
+<script>
+    layui.use('examwork/assign_examsetmeal_view', layui.factory('examwork/assign_examsetmeal_view'));
+</script>
+
+
+

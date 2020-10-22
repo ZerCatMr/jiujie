@@ -1,0 +1,19 @@
+<!-- 干保办体检管理/填报人员名单/查看填报人员名单-->
+<div class="layui-fluid" id="examwork_fillinperson_show">
+    <div class="layui-card">
+        <div class="layui-card health-toolbar">
+            <div class="health-filter health-filter-input">
+                <input type="text" name="health-search"  placeholder="过滤"/>
+            </div>
+        </div>
+        <div class="layui-card-body health-table-default">
+            <table lay-size="sm" class="layui-table" id="fillinpersonshowtable" lay-filter="fillinpersonshowtable"></table>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use('examwork/fillin_person_show', layui.factory('examwork/fillin_person_show'));
+</script>
+
+
+

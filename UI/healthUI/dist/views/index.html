@@ -1,0 +1,206 @@
+<!--<script type="text/html" template>-->
+    <!--&lt;!&ndash; 目前角色和用户关系是1对1，所以每次取roles[0]的位置 &ndash;&gt;-->
+    <!--{{# var roleName =  layui.data("health").userinfo.roles[0].roleName}}-->
+    <!--{{# if (roleName=== "干保办管理员") { }} -->
+    <!--<div class="layui-fluid" lay-title="首页">-->
+
+        <!--<div class="layui-row layui-col-space15">-->
+            <!--<div class="layui-col-sm6 layui-col-md6">-->
+                <!--<div class="layui-card">-->
+                    <!--<div class="layui-card-header">-->
+                        <!--登记患者-->
+                    <!--</div>-->
+                    <!--<div class="layui-card-body">-->
+                        <!--<div class="layui-carousel layadmin-carousel layadmin-backlog" lay-anim=""-->
+                             <!--lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 280px;">-->
+                            <!--<div carousel-item="">-->
+                                <!--<ul class="layui-row layui-col-space10 layui-this">-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a lay-href="app/content/comment" class="layadmin-backlog-body">-->
+                                            <!--<h3>在管/人</h3>-->
+                                            <!--<p><cite id="countUp1">66</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a lay-href="app/forum/list" class="layadmin-backlog-body">-->
+                                            <!--<h3>非在管/人</h3>-->
+                                            <!--<p><cite id="countUp2">12</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a lay-href="template/goodslist" class="layadmin-backlog-body">-->
+                                            <!--<h3>死亡/人</h3>-->
+                                            <!--<p><cite id="countUp3">99</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a href="javascript:;" onclick="layer.tips('不跳转', this, {tips: 3});"-->
+                                           <!--class="layadmin-backlog-body">-->
+                                            <!--<h3>失访/人</h3>-->
+                                            <!--<p><cite id="countUp4">20</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                                <!--<ul class="layui-row layui-col-space10">-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a href="javascript:;" class="layadmin-backlog-body">-->
+                                            <!--<h3> 危险性3-5级</h3>-->
+                                            <!--<p><cite style="color: #FF5722;" id="countUp5">3</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a href="javascript:;" class="layadmin-backlog-body">-->
+                                            <!--<h3>病情不稳定</h3>-->
+                                            <!--<p><cite style="color: #FF5722;" id="countUp6">5</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a href="javascript:;" class="layadmin-backlog-body">-->
+                                            <!--<h3>有冲动行为</h3>-->
+                                            <!--<p><cite style="color: #FF5722;" id="countUp7">5</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<div class="layui-carousel-ind">-->
+                                <!--<ul>-->
+                                    <!--<li class="layui-this"></li>-->
+                                    <!--<li></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                            <!--<button class="layui-icon layui-carousel-arrow" lay-type="sub"></button>-->
+                            <!--<button-->
+                                    <!--class="layui-icon layui-carousel-arrow" lay-type="add">-->
+                            <!--</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="layui-col-sm6 layui-col-md6">-->
+                <!--<div class="layui-card">-->
+                    <!--<div class="layui-card-header">-->
+                        <!--待办事项-->
+                    <!--</div>-->
+                    <!--<div class="layui-card-body">-->
+                        <!--<div class="layui-carousel layadmin-carousel layadmin-backlog" lay-anim=""-->
+                             <!--lay-indicator="inside" lay-arrow="none" style="width: 100%; height: 280px;">-->
+                            <!--<div carousel-item="">-->
+                                <!--<ul class="layui-row layui-col-space10 layui-this">-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a lay-href="app/content/comment" class="layadmin-backlog-body">-->
+                                            <!--<h3>在管/人</h3>-->
+                                            <!--<p><cite id="countUp8">66</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a lay-href="app/forum/list" class="layadmin-backlog-body">-->
+                                            <!--<h3>非在管/人</h3>-->
+                                            <!--<p><cite id="countUp9">12</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a lay-href="template/goodslist" class="layadmin-backlog-body">-->
+                                            <!--<h3>死亡/人</h3>-->
+                                            <!--<p><cite id="countUp10">99</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a href="javascript:;" onclick="layer.tips('不跳转', this, {tips: 3});"-->
+                                           <!--class="layadmin-backlog-body">-->
+                                            <!--<h3>失访/人</h3>-->
+                                            <!--<p><cite id="countUp11">20</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                                <!--<ul class="layui-row layui-col-space10">-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a href="javascript:;" class="layadmin-backlog-body">-->
+                                            <!--<h3> 危险性3-5级</h3>-->
+                                            <!--<p><cite style="color: #FF5722;" id="countUp12">3</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a href="javascript:;" class="layadmin-backlog-body">-->
+                                            <!--<h3>病情不稳定</h3>-->
+                                            <!--<p><cite style="color: #FF5722;" id="countUp13">5</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="layui-col-xs6">-->
+                                        <!--<a href="javascript:;" class="layadmin-backlog-body">-->
+                                            <!--<h3>有冲动行为</h3>-->
+                                            <!--<p><cite style="color: #FF5722;" id="countUp14">5</cite></p>-->
+                                        <!--</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+            <!--<div class="layui-col-sm12">-->
+                <!--<div class="layui-card">-->
+                    <!--<div class="layui-card-header">-->
+                        <!--数据概览-->
+                        <!--<div class="layui-btn-group layuiadmin-btn-group">-->
+                            <!--&lt;!&ndash; <button class="layui-btn layui-btn-primary layui-btn-xs">去年</button>-->
+                      <!--<button class="layui-btn layui-btn-primary layui-btn-xs">今年</button> &ndash;&gt;-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="layui-card-body">-->
+                        <!--<div class="layui-row">-->
+                            <!--<div class="layui-col-sm8">-->
+                                <!--<div class="layui-card-header">不等距折线图</div>-->
+                                <!--<div class="layui-card-body">-->
+
+                                    <!--<div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade"-->
+                                         <!--lay-filter="LAY-index-diffline">-->
+                                        <!--<div carousel-item id="LAY-index-diffline">-->
+                                            <!--<div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="layui-col-sm4">-->
+                                <!--<div class="layuiadmin-card-list">-->
+                                    <!--<p class="layuiadmin-normal-font">危险性3-5级</p>-->
+                                    <!--<span>同上期增长</span>-->
+                                    <!--<div class="layui-progress layui-progress-big" lay-showPercent="yes">-->
+                                        <!--<div class="layui-progress-bar" lay-percent="30%"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="layuiadmin-card-list">-->
+                                    <!--<p class="layuiadmin-normal-font">病情不稳定</p>-->
+                                    <!--<span>同上期增长</span>-->
+                                    <!--<div class="layui-progress layui-progress-big" lay-showPercent="yes">-->
+                                        <!--<div class="layui-progress-bar" lay-percent="20%"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="layuiadmin-card-list">-->
+                                    <!--<p class="layuiadmin-normal-font">有冲动行为</p>-->
+                                    <!--<span>同上期增长</span>-->
+                                    <!--<div class="layui-progress layui-progress-big" lay-showPercent="yes">-->
+                                        <!--<div class="layui-progress-bar" lay-percent="25%"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+    <!--</div>-->
+    <!--{{# } else if(roleName=== "干保办领导") { }}  -->
+    <!--<iframe src="//www.baidu.com/" frameborder="0" class="layadmin-iframe">-->
+    <!--</iframe>-->
+    <!--{{# } }} -->
+<!--</script>-->
+<iframe class="layadmin-iframe" src="" framborder="0" id="index_iframe"></iframe>
+<script>
+    layui.use('base/index', layui.factory('base/index'));
+</script>

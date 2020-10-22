@@ -1,0 +1,55 @@
+<!-- 体检信息统计页面-->
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">                            
+            <div class="layui-form layui-form-pane health-query">                            
+                <div class="layui-form-item">
+                    <div class="layui-col-md10">
+                        <label class="layui-form-label">体检年份</label>
+                        <div class="multi-checkbox"  hyd-name="yearname" id="per-yearname">
+                            <div class="hyd-selected" hyd-value="2019"><span>2019年春季</span></div>
+                            <div hyd-value="2018"><span>2018年春季</span></div>
+                            <div hyd-value="2017"><span>2017年春季</span></div>
+                            <div hyd-value="2016"><span>2016年春季</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-col-md10">
+                        <label class="layui-form-label">统计指标</label>
+                        <div class="multi-checkbox" hyd-name="quotaname" id="per-quotaname">
+                            <div class="hyd-selected"><span hyd-value="1">医院</span></div>
+                            <div><span hyd-value="2">男女干部</span></div>
+                            <div><span hyd-value="3">参检单位</span></div>
+                            <div><span hyd-value="4">人员类型</span></div>
+                            <div><span hyd-value="5">省级干部</span></div>
+                            <div><span hyd-value="6">厅级干部</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search"  placeholder="过滤"/>
+            <i class="layui-icon layui-icon-search"></i>
+        </div>
+        <div class="health-right">
+            <button type="button" class="layui-btn" id="hyd_info_toExcel" lay-filter="toExcel">
+                <i class="layui-icon layui-icon-table">导出Excel</i>
+            </button>
+        </div>
+    </div>
+
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="personcounttb" lay-filter="personcounttb"></table>
+    </div>
+</div>
+<script>
+layui.use('report/personnum', layui.factory('report/personnum'));
+</script>
+
+
+

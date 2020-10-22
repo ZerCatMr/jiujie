@@ -1,0 +1,220 @@
+<!--健康个案信息-->
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">
+                <div class="layui-form layui-form-pane health-query">
+                    <div class="layui-form-item">
+                            <div class="layui-col-md3">
+                                <label class="layui-form-label">参检单位</label>
+                                <div class="layui-input-inline">
+                                    <select name="organ" id="hyd_healthinfo_organ" lay-search="">
+                                        <option value="">直接选择或搜索选择</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-col-md3">
+                                <label class="layui-form-label">医疗待遇</label>
+                                <div class="multi-checkbox" hyd-name="medtreat">
+                                    <div><span hyd-value="0">省级</span></div>
+                                    <div><span hyd-value="1">厅级</span></div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="layui-form-item">
+                            <div class="layui-col-md3">
+                                <label class="layui-form-label">姓名</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="personname" placeholder="姓名" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-col-md3">
+                                <label class="layui-form-label">身份证号</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="personIdenNo" placeholder="身份证号" class="layui-input">
+                                </div>
+                            </div>
+                    </div>
+                    <br/>
+                    <div class="layui-form-item" id="info_item_oper">
+                        <div class="layui-inline pat_toobar">
+                                <button class="layui-btn  mr5" lay-filter="doctorbaseQuery" id="hyd_pat_doctor">
+                                    <i class="layui-icon">查询</i>
+                                </button>
+                                <button class="layui-btn  mr5" lay-filter="doctorbaseReset">
+                                    <i class="layui-icon">重置</i>
+                                </button>
+                                <button class="layui-btn mr5" lay-filter="doctorbaseAdd">
+                                    <i class="layui-icon">新增健康个案</i>
+                                </button>
+                        </div>
+                    </div>
+                    </div>
+        </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search" placeholder="过滤"/>
+            <i class="layui-icon layui-icon-search"></i>
+        </div>
+    </div>
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="pathealthtb" lay-filter="pathealthtb"></table>
+    </div>
+</div>
+
+<script>
+    layui.use('patrol/pat_health_info', layui.factory('patrol/pat_health_info'));
+</script>
+
+<!-- 动态表格操作按钮 -->
+<script type="text/html" id="info_tool">
+    {{#  if(d.doctorNams != ''){ }}
+    <a class="layui-btn layui-btn-xs " lay-event="editDoctor">编辑医生</a>
+    {{#  } }}
+
+    {{#  if(d.doctorNams == ''||d.doctorNams == null){ }}
+    <a class="layui-btn layui-btn-xs " lay-event="addDoctor">新增医生</a>
+    {{#  } }}
+</script>
+<script type="text/html" id="add_info_tool">
+    <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="addInfo" id="add_info_tool_submit">新增个案</a>
+</script>
+
+<script type="text/html" id="hospTalBar">
+    <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="addInfo" id="hospTalBar_dell">移除医生</a>
+</script>
+
+<!-- 新增健康个案弹出层 -->
+<script type="text/html" id="info_addLayer">
+    <div id="" class="layui-layer-content" style="height: 457px;">
+        <div class="layui-form layui-form-pane" lay-filter="healthdocu-carepsn-select-queryform"
+             style="padding:10px;">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">参检单位</label>
+                    <div class="layui-input-inline">
+                        <select name="examOrganID" id="examOrganID_add" lay-search="">
+                            <option value="">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline"><label class="layui-form-label">待遇</label>
+                    <div class="layui-input-inline">
+                        <select name="medTreatName" lay-search="">
+                            <option value="">请选择</option>
+                            <option value="省级">省级</option>
+                            <option value="厅级">厅级</option>
+                        </select>
+                        <div class="layui-form-select">
+                            <div class="layui-select-title"><input type="text" placeholder="请选择" value=""
+                                                                   class="layui-input"><i class="layui-edge"></i>
+                            </div>
+                            <dl class="layui-anim layui-anim-upbit">
+                                <dd lay-value="" class="layui-select-tips">请选择</dd>
+                                <dd lay-value="省级" class="">省级</dd>
+                                <dd lay-value="厅级" class="">厅级</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline"><label class="layui-form-label">姓名</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="userName" placeholder="姓名" class="layui-input" maxlength="6"></div>
+                </div>
+                <div class="layui-inline"><label class="layui-form-label">身份证号</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="identID" id="identID" placeholder="身份证号"
+                               class="layui-input data-number" maxlength="18">
+                    </div>
+                </div>
+                <div style="float:right;position: relative;">
+                    <button class="layui-btn layui-btn-sm mr5" lay-submit lay-filter="queryHealth"><i
+                            class="layui-icon"></i>查询
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="patrol-card layui-card">
+            <div class="patrol-card-header layui-card-header">保健对象
+            </div>
+        </div>
+        <div class="layui-card health-table-default">
+            <table lay-size="sm" class="layui-table" id="healthdocu" lay-filter="healthdocu"></table>
+        </div>
+    </div>
+</script>
+
+<!--为健康个案对象新增医生弹窗-->
+<script type="text/html" id="info_editDoctoLayer">
+    <div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <button class="layui-btn" id="info_editDoctoLayer_addDoc"><i class="layui-icon"></i>安排保健医生</button>
+            </div>
+        </div>
+        <div class="layui-form">
+            <div class="layui-form-item health-table-default">
+                <table id="info_layerAddDoctor_table" lay-filter="info_layerAddDoctor_table"></table>
+            </div>
+        </div>
+        <div class="layui-layer-btn layui-layer-btn-">
+            <a class="layui-layer-addVisitVisit">确定</a>
+            <a class="layui-layer-btn1">取消</a></div>
+        <span class="layui-layer-resize"></span>
+    </div>
+</script>
+
+<!-- 新增保健医生弹窗 -->
+<script type="text/html" id="info_addtDoctoLayer">
+    <div>
+        <div class="layui-form-item">
+            <div class="layui-inline"><label class="layui-form-label">所属医院</label>
+                <div class="layui-input-inline">
+                    <select name="hospital" lay-search="">
+                    <option value="">请选择</option>
+                    <option value="sc1huaxi">四川大学华西医院</option>
+                    <option value="sc2peopsn">四川省人民医院</option>
+                </select>
+                </div>
+            </div>
+            <div class="layui-inline"><label class="layui-form-label">职称</label>
+                <div class="layui-input-inline"><select name="title" lay-search="">
+                    <option value="">请选择</option>
+                    <option value="主任医师">主任医师</option>
+                    <option value="副主任医师">副主任医师</option>
+                    <option value="主任护师">主任护师</option>
+                    <option value="副主任护师">副主任护师</option>
+                </select>
+                </div>
+            </div>
+            <div style="float:right;position: relative;">
+                <button class="layui-btn layui-btn-sm mr5" lay-filter="healthdocu-doctor-select-querybtn"><i
+                        class="layui-icon"></i>查询
+                </button>
+            </div>
+        </div>
+
+        <div class="layui-form">
+            <div class="layui-form-item health-table-default">
+                <table id="info_adddDoctoLayer_table"></table>
+            </div>
+        </div>
+        <div class="layui-layer-btn layui-layer-btn-">
+            <a class="layui-layer-addVisitVisit" id="info_addtDoctoLayer_addDoc">添加医生</a>
+            <a class="layui-layer-btn1">取消</a></div>
+        <span class="layui-layer-resize"></span>
+    </div>
+</script>
+
+<!-- 新增保健医生的单选按钮-->
+<script type="text/html" id="info_radio_tool">
+    <input type="radio" name="info_doctor_checkbox">
+</script>
+
+
+
+
+
+

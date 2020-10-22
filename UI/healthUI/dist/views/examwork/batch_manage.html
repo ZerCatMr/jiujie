@@ -1,0 +1,43 @@
+<!--干保办体检工作/体检批次管理-->
+<div class="layui-fluid" id="examwork_batchmanage">
+    <div class="layui-card">
+        <div class="layui-col-md12">
+            <div class="layui-col-md8">
+                <div class="health-toolbar">
+                    <div class="layui-form-item">
+                    </div>
+                    <div class="health-filter health-filter-input">
+                        <input type="text" name="health-search"  placeholder="过滤"/>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="layui-btn layui-btn-normal" id="add" style="text-align: center; margin-top: 10px">新增体检批次</div>
+            </div>
+        </div>
+        <div class="health-table-default">
+            <table lay-size="sm" class="layui-table" id="examwork_batchmanage_table" lay-filter="examwork_batchmanage_table"></table>
+        </div>
+    </div>
+</div>
+
+
+<!-- 体检批次管理表格工具条-->
+<script type="text/html" id="examwork_batchmanage_table_bolder">
+    <a class="layui-btn  layui-btn-xs" lay-event="view" >查看</a>
+    {{# if(d.is_effective==='1'){  }}
+    <a class="layui-btn  layui-btn-normal layui-btn-xs" lay-event="edit" >编辑</a>
+    {{# }if(d.is_effective==='0'){  }}
+    <a class="layui-btn  layui-btn-primary layui-btn-xs" lay-event="start">生效</a>
+    {{# }else{ }}
+    <a class="layui-btn  layui-btn-danger  layui-btn-xs" lay-event="stop">失效</a>
+    {{# } }}
+</script>
+
+
+<script>
+    layui.use('examwork/batch_manage', layui.factory('examwork/batch_manage'));
+</script>
+
+
+

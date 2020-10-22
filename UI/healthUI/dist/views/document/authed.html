@@ -1,0 +1,79 @@
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header">基础管理</div>
+                        <div class="layui-card-body">                            
+                            <div class="layui-form layui-form-pane">                            
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">管理地区</label>
+                                        <div class="layui-input-inline">
+                                            <select name="zone">
+                                                <option value="">请选择</option>
+                                                <option value="0">北京</option>
+                                                <option value="1">上海</option>
+                                                <option value="2">广州</option>
+                                                <option value="3">深圳</option>
+                                                <option value="4">杭州</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <div class="layui-btn-group">
+                                            <button class="layui-btn layui-btn-sm layui-btn-normal" name='zone_up'>上一级</button>
+                                            <button class="layui-btn layui-btn-sm layui-btn-normal" name='zone_down'>下一级</button>
+                                        </div>
+                                    </div>
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">报表时间</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="StatisDate" placeholder="" autocomplete="off" class="layui-input">
+                                        </div>
+                                    </div>
+                                     <div class="layui-inline">
+                                        <div class="layui-btn-group">
+                                            <button class="layui-btn layui-btn-sm layui-btn-normal" lay-submit lay-filter="report_query">查询</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="layui-col-md12">
+                            <div class="layui-tab-item layui-show">
+                                <script type="text/html" id="statis_table_toolbar">
+                                    <div style="color: #666;text-align: center;" id="ReportNam"></div>
+                                </script>
+                            </div>  
+                        </div>
+                        <div class="layui-card p20 br5">
+                    <table lay-size="sm" class="layui-table" id="statis_table" lay-filter="statis_table"></table>
+                    <pre style="color: red;font:14px Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-serif">
+统计规则：
+1、应访患者人数：截至本月最后一日24时“知情同意”选择“同意参加社区服务管理”的患者(未失访患者和未死亡患者)中，本月与上一次随访时间（不限于本月）或知情同意时间月份间隔≥3个月。
+2、随访患者人数：录入“随访时间”的患者人数。
+3、随访形式人数、人次：若某患者门诊随访1次、家庭访视0次，电话随访1次，视频随访0次，则合计人数为1，合计人次为2。　
+4、访到患者指填写“住院情况”的患者。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+5、疾病诊断、危险性评估、病情分类、冲动行为、服药依从性、治疗效果、实验室检查、药物不良反应、转诊、关锁情况、康复措施等项，以在管居家患者本月最后一次随访记录为基础统计。在管居家患者=“期间未住院”+“期间曾住院现未住院”患者。
+6、轻度滋事、肇事、肇祸、其他危害他人行为、自伤、自杀未遂人数指本月居家患者中出现相应行为的人数，如某患者本月“自伤”5次，则“自伤”人数计算为1、“自伤”人次计算为5。
+危害行为包括轻度滋事、肇事、肇祸及其他危害他人行为：若某患者“肇祸”1次、“其他危害他人行为”2次，则“危害行为”合计“人数”为1、“人次”为3。
+伤害行为包括自伤、自杀未遂：若某患者“自伤”6次、“自杀未遂”2次，则“伤害行为”合计“人数”为1、“人次”为8。
+7、本表统计的时间范围为本月1日零时至本月最后一日24时，不包括重复数据。
+                    </pre>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+layui.use('report/basicinfo', layui.factory('report/basicinfo'));
+</script>
+
+
+

@@ -1,0 +1,166 @@
+{
+  "code":0,
+  "message":"ssuccess",
+  "data":
+    {
+        "schedules":[
+           {
+                "planCd":"t1",
+                "planDate": "2020/03/21",
+                "hospNam": "四川大学华西医院",
+                "hospCd": "tsada",
+                "typeNam": "省级",
+                "typeCd": "asd1",
+                "organCount":"35",
+                "personCount":"522",
+                "organs": [
+                    {
+                    "organId":"test004",
+                    "organNam":"省委办公厅",
+                    "personCount":3,
+                    "personList":[
+                    {
+                    "personId":"p1001",
+                    "name":"张三"
+                    },
+                    {
+                    "personId":"p1002",
+                    "name":"李四"
+                    },
+                    {
+                    "personId":"p2010",
+                    "name":"王五"
+                    }
+                    ]
+                  },
+                  {
+                    "organId":"test005",
+                    "organNam":"省政府办公厅",
+                    "personCount":2,
+                    "personList":[
+                      {
+                        "personId":"p5001",
+                        "name":"杨某某"
+                      },
+                      {
+                        "personId":"p2501",
+                        "name":"李某某"
+                      },
+                      {
+                        "personId":"p4010",
+                        "name":"王某某"
+                    }
+                ]
+              }
+            ]
+          }
+          ,{
+            "planCd":"p2",
+            "planDate": "2020/03/22",
+            "hospNam": "四川大学华西医院",
+            "hospCd": "tsada",
+            "typeNam": "省级",
+            "typeCd": "asd1",
+            "organCount":"12",
+            "personCount":"155",
+            "organs": [
+              {
+                "organId":"test001",
+                "organNam":"省人大办公厅",
+                "personCount":3,
+                "personList":[
+                  {
+                    "personId":"p1001",
+                    "name":"张三"
+                  },
+                  {
+                    "personId":"p1002",
+                    "name":"李四"
+                  },
+                  {
+                    "personId":"p2010",
+                    "name":"王五"
+                  }
+                ]
+              }
+            ]
+          }
+          ,{
+            "planCd":"p3",
+            "planDate": "2020/07/22",
+            "hospNam": "四川大学华西医院",
+            "hospCd": "tsada",
+            "typeNam": "省级",
+            "typeCd": "asd1",
+            "organCount":"2",
+            "personCount":"0",
+            "organs": [{
+              "organId":"test002",
+              "organNam":"省纪委",
+              "personCount":0,
+              "personList":[]
+              },
+              {
+                "organId":"test003",
+                "organNam":"省检察院",
+                "personCount":0,
+                "personList":[]
+              }
+            ]
+              }
+          ,{
+            "planCd":"p4",
+            "planDate": "2020/08/22",
+            "hospNam": "四川大学华西医院",
+            "hospCd": "tsada",
+            "typeNam": "省级",
+            "typeCd": "asd1",
+            "organCount":"0",
+            "personCount":"0",
+            "organs": []
+          }
+            ]
+        ,
+        "organs":[
+          {
+            "organId":"asdaad1",
+            "organNam":"省统计局",
+            "personCount":3,
+            "personList":[
+              {
+                "personId":"p1001",
+                "name":"张三"
+              },
+              {
+                "personId":"p1002",
+                "name":"李四"
+              },
+              {
+                "personId":"p2010",
+                "name":"王五"
+              }
+            ]
+          },
+          {
+            "organId":"tesxczxc001",
+            "organNam":"省质监局",
+            "personCount":2,
+            "personList":[
+              {
+                "personId":"p5001",
+                "name":"杨某某"
+              },
+              {
+                "personId":"p2501",
+                "name":"李某某"
+              },
+              {
+                "personId":"p4010",
+                "name":"王某某"
+              }
+            ]
+          }
+        ]
+    }
+
+}

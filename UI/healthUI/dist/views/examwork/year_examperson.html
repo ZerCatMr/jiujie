@@ -1,0 +1,115 @@
+<!-- 年度体检名单-->
+<div class="layui-fluid">
+    <div class="layui-card">
+        <div class="layui-card-body">                            
+            <div class="layui-form layui-form-pane health-query">
+                <div class="layui-form-item">
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">体检批次</label>
+                        <div class="layui-input-inline">
+                            <select name="batch" id="hyd_year_batch" lay-verify="required"></select>
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">参检单位</label>
+                        <div class="layui-input-inline">
+                            <select name="organ" id="hyd_year_organ" lay-search="">
+                                <option value="">直接选择或搜索选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">安排体检医院</label>
+                        <div class="layui-input-inline">
+                            <select name="hospCd" class="hyd_year_hosptail">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">实际体检医院</label>
+                        <div class="layui-input-inline">
+                            <select name="rptHospCd" class="hyd_year_hosptail">
+                                <option value="">请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-col-md3 ">
+                        <label class="layui-form-label">人员类型</label>
+                        <div class="multi-checkbox" name="typeNam" id="hyd_year_typeNam">
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label">医疗待遇</label>
+                        <div class="multi-checkbox" name="treatNam" id="hyd_year_treatNam">
+                        </div>
+                    </div>
+                    
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label" >特殊标记</label>
+                        <div class="multi-checkbox" name="mark" id="hyd_year_mark">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label" >待遇类型</label>
+                        <div class="multi-checkbox" name="pay" id="hyd_year_pay">
+                        </div>
+                    </div>
+                    <div class="layui-col-md3">
+                        <label class="layui-form-label" >是否参检</label>
+                        <div class="multi-checkbox" name="noExam" id="hyd_year_noExam">
+                        </div>
+                    </div>
+                <div class="layui-form-item">
+                    <div class="layui-col-md12">
+                        <label class="layui-form-label">机构性质</label>
+                        <div class="multi-checkbox" name="orgType" id="hyd_year_orgType">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-col-md12">
+                        <label class="layui-form-label" >人员级别</label>
+                        <div class="layui-col-md8 multi-checkbox" name="levNam" id="hyd_year_levNam">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn" lay-submit="query"  lay-filter="years" >
+                        <i class="layui-icon layui-icon-search">查询</i>
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search"  placeholder="过滤"/>
+            <i class="layui-icon layui-icon-search"></i>
+        </div>
+        <div class="health-right">
+            <button type="button" class="layui-btn" id="hyd_year_toExcel"  lay-filter="years">
+                <i class="layui-icon layui-icon-table">导出Excel</i>
+            </button>
+        </div>
+    </div>
+
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="yearexampersontb" lay-filter="yearexampersontb" >
+        </table>
+    </div>
+</div>
+
+<script>
+layui.use('examwork/year_examperson', layui.factory('examwork/year_examperson'));
+</script>
+
+
+
+
+

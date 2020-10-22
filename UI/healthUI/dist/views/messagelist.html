@@ -1,0 +1,28 @@
+<!-- 获取登录的用户的角色的信息 -->
+<script type="text/html" template >
+{{# 
+  /**
+  * 获取local中的tab页签切换下标
+  */
+  var tabsindex = layui.data("mhdrStorage").tabsindex;
+}}
+{{# if(tabsindex == 0){ }}
+  <a href="javascript:;" layadmin-event="message" lay-href="message/message">
+    <i class="layui-icon layui-icon-notice"></i>
+    <!--如果有消息显示小圆点-->
+    {{# var status = "直报用户"}}
+    {{#if(status === '直报用户'){}}
+    <span class="layui-badge">6+</span>
+    {{#}}}
+  </a>
+{{# } else if(tabsindex == 1) { }}
+  <a href="javascript:;" layadmin-event="message" lay-href="message/PNMCmessage">
+    <i class="layui-icon layui-icon-notice"></i>
+    <!--如果有消息显示小圆点-->
+    {{# var status = "直报用户"}}
+    {{#if(status === '直报用户'){}}
+    <span class="layui-badge">99+</span>
+    {{#}}}
+  </a>
+{{# } }}
+</script>

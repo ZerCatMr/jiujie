@@ -1,0 +1,473 @@
+<style>
+    #examwork_fillinperson_edit .layui-card-header{
+        height: 80px;
+    }
+    #examwork_fillinperson_edit [name="title"]{
+        font-weight: bolder;
+        font-size: 22px;
+        color: #737383;
+        margin-top: 20px;
+    }
+    #examwork_fillinperson_edit .layui-card-header [name="left/right"]{
+        margin-top: 5px;
+    }
+    #examwork_fillinperson_edit .floating_btns {
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-left: 700px;
+    }
+    #examwork_fillinperson_edit #center_card .layui-card{
+        margin-top: -15px;
+        height: 700px;
+    }
+    #examwork_fillinperson_edit .userDiv{
+        height: 270px;
+        width: 190px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        float: left;
+    }
+    #examwork_fillinperson_edit .userDiv_head{
+        background-color: #009688;
+        height: 50px;
+    }
+    #examwork_fillinperson_edit .userDiv_body{
+        background-color: #FAFAFA;
+        height: 170px;
+    }
+    #examwork_fillinperson_edit .userDIv_bottom{
+        background-color: #FAFAFA;
+        height: 40px;
+        cursor:pointer;
+    }
+    #examwork_fillinperson_edit .userDiv_head .layui-form{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    #examwork_fillinperson_edit .userDIv_bottom .per_btn{
+        padding-top: 1px;
+        font-family: 微软雅黑,serif;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        line-height: 35px;
+    }
+    #examwork_fillinperson_edit .userDiv_head .left [name="username"]{
+        padding-top: 5px;
+        font-family: 微软雅黑;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        line-height: 35px;
+    }
+    #examwork_fillinperson_edit .userDiv_head .center {
+        padding-top: 15px;
+        font-family: 微软雅黑;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+    }
+    #examwork_fillinperson_edit .userDiv_head .right {
+        padding-top: 15px;
+        font-family: 微软雅黑;
+        font-size: 15px;
+        color: white;
+        text-align: center;
+    }
+    #examwork_fillinperson_edit .userDiv [name="col"]{
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    #examwork_fillinperson_edit .userDiv  .userDiv_body .edit_user{
+        margin-left: 50px;
+    }
+    #examwork_fillinperson_edit #center_card_right .layui-col-md4{
+        margin-top: 5px;
+    }
+    #examworkfillinpersonadd_editperson_center .line_name{
+        width: 120px;
+        text-align: left;
+    }
+    #examworkfillinpersonadd_editperson_center [name="mark"]{
+        color: red;
+    }
+    #examworkfillinpersonadd_editperson_center .line_body_1{
+        width: 150px;
+    }
+    #examworkfillinpersonadd_editperson_center .line_body_2{
+        width: 150px;
+    }
+    #examwork_fillinperson_edit [divName="addDiv"]{
+        border:5px solid rgba(84, 237, 30, 0.5);
+    }
+    #examwork_fillinperson_edit [divName="delDiv"]{
+        border: 5px solid rgba(237, 30, 30,  0.5);
+    }
+    #import_user:hover{
+        cursor: pointer;
+    }
+    #examworkfillinpersonedit_confirmmanage_center .layui-form-item{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>
+<!-- 干保办体检管理/填报人员名单/查看填报人员名单-->
+<div id="examwork_fillinperson_edit">
+    <!-- 顶部区域-->
+    <div name="top" style="padding: 10px; background-color: #F2F2F2; margin-top: -10px">
+        <div class="layui-row layui-col-space15" id="top_card">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        <div class="layui-col-md4" name="left/right">
+                        </div>
+                        <!--标题区域-->
+                        <div class="layui-col-md4" name="title">2019年春季成都市xxx单位参检人员名单表</div>
+                        <div class="" name="left/right" style="height: 50px">
+                            <div>人员统计: 在职人数15；离退人数33; 参检12；不参检5；总人数96；</div>
+                            <div style="margin-top: -20px">信息统计: xx; xx;  xx;  x;</div>
+                            <div style="margin-top: -20px">单位统计:  xxx; xx; xxx; xxx;  xx;  xx;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- card区域-->
+    <div name="center" style="padding: 10px;">
+        <div class="layui-row layui-col-space15" id="center_card">
+            <div class="layui-col-md12 ">
+                <div class="layui-card">
+                    <div class="layui-col-md12 health-query layui-form" id="center_card_top">
+                        <div class="layui-form-item">
+                            <div class="layui-col-md2" style="margin-top: 10px">
+                                <label class="layui-form-label" style="width: 100px; float: left">人员类型</label>
+                                <div class="multi-checkbox" id="hyd_exam_orgtype">
+                                    <div><span>在职</span></div>
+                                    <div><span>离退</span></div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md2" style="margin-top: 10px">
+                                <label class="layui-form-label" style="width: 100px; float: left">人员级别</label>
+                                <div class="multi-checkbox" id="hyd_exam_type">
+                                    <div><span>省级</span></div>
+                                    <div><span>厅级</span></div>
+                                </div>
+                            </div>
+                            <div class="layui-col-md8">
+                                <div style="margin-top: 10px">
+                                    <label class="layui-form-label" style="width: 100px; float: left;">筛选标签</label>
+                                    <div class="multi-checkbox layui-input-inline" >
+                                        <div><span>参检</span></div>
+                                        <div><span>不参检</span></div>
+                                    </div>
+                                    <div class="multi-checkbox layui-input-inline" style="width: 300px;margin-left: -50px; float: left">
+                                        <div><span>已填报</span></div>
+                                        <div><span>未填报</span></div>
+                                        <div><span>填报中</span></div>
+                                    </div>
+                                </div>
+                                <div id="import_user" style="float: left; border: 1px solid;" title="导入用户">
+                                    <div>
+                                        <i class="layui-icon layui-icon-user" style="font-size: 30px;"></i>
+                                    </div>
+                                </div>
+                                <div class="health-filter health-filter-input">
+                                    <input type="text" name="health-search"  placeholder="过滤" style="float: right"/>
+                                </div>
+                                <!--分页条-->
+                                <div id="fillin_person_edit_page" style="float:right; margin-right: 5px; margin-top: -8px"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--显示所有card区-->
+                    <div class="layui-col-md12" style="background-color: rgb(199,237,204); height: 680px">
+                        <div id="center_card_main"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 确认/取消按钮-->
+    <div class="floating_btns">
+        <div class="layui-btn layui-btn-normal" id="save">&nbsp;&nbsp;&nbsp;保&nbsp;&nbsp;存&nbsp;&nbsp;&nbsp;</div>
+        <div class="layui-btn layui-btn-primary" id="cancel">&nbsp;&nbsp;&nbsp;取&nbsp;&nbsp;消&nbsp;&nbsp;&nbsp;</div>
+    </div>
+</div>
+<!--新增人员弹窗-->
+<script type="text/html" id="examworkfillinpersonedit_addperson_layer">
+    <br/>
+    <div id="examworkfillinpersonedit_addperson_center">
+    </div>
+</script>
+
+<!--编辑人员弹窗-->
+<script type="text/html" id="examworkfillinpersonedit_editperson_layer">
+    <br/>
+    <div id="examworkfillinpersonadd_editperson_center">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name"><span>姓名:  </span><span name="mark">*</span></label>
+                    <div class="layui-input-inline line_body_1">
+                        <input type="text" name="name" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name"><span>身份证号:  </span><span name="mark">*</span></label>
+                    <div class="layui-input-inline line_body_2">
+                        <input type="text" name="idcard" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name"><span>性别:  </span></label>
+                    <div class="layui-input-inline line_body_1">
+                        <select name="interest" lay-filter="aihao">
+                            <option value="3">男性</option>
+                            <option value="4">女性</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name"><span>出生年月:  </span></label>
+                    <div class="layui-input-inline line_body_2">
+                        <input id="birthDate" type="text" name="idcard" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline" style="width: 500px">
+                    <label class="layui-form-label line_name"><span>人员类型:  </span><span name="mark">*</span></label>
+                    <div class="layui-input-block line_body">
+                        <input type="radio" name="user_type" value="1" title="在职" >
+                        <input type="radio" name="user_type" value="2" title="离休">
+                        <input type="radio" name="user_type" value="3" title="退休">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline" style="width: 700px">
+                    <label class="layui-form-label line_name"><span>人员级别:  </span><span name="mark">*</span></label>
+                    <div class="layui-input-block line_body">
+                        <input type="radio" name="user_level" value="1" title="正厅级" >
+                        <input type="radio" name="user_level" value="2" title="副厅级">
+                        <input type="radio" name="user_level" value="3" title="正县级">
+                        <input type="radio" name="user_level" value="4" title="副县级">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline" style="width: 350px">
+                    <label class="layui-form-label line_name"><span>待遇类型:</span><span name="mark">*</span></label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="treat_type" value="1" title="实职" >
+                        <input type="radio" name="treat_type" value="2" title="享受待遇">
+                    </div>
+                </div>
+                <div class="layui-inline" style="margin-left: -50px">
+                    <label class="layui-form-label"  style="width: 100px;">
+                        <span>医疗待遇:  </span><span name="mark">*</span>
+                    </label>
+                    <div class="layui-input-block"  style="width: 150px">
+                        <input type="text" name=""class="layui-input" disabled value="县级">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline" style="width: 300px">
+                    <label class="layui-form-label line_name">
+                        <span>是否参检:</span><span name="mark">*</span>
+                    </label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="is_exam" value="1" title="是" >
+                        <input type="radio" name="is_exam" value="2" title="否">
+                    </div>
+                </div>
+                <div class="layui-inline" style="width: 350px;">
+                    <label class="layui-form-label line_name"><span>体检地:  </span><span name="mark">*</span></label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="exam_zone" value="1" title="本地" checked>
+                        <input type="radio" name="exam_zone" value="2" title="异地">
+                    </div>
+                </div>
+            </div>
+            <!-- 本地体检区域-->
+            <div class="layui-form-item" name="expected_hosp">
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name" style="width: 130px">
+                        <span>期望体检医院:</span><span name="mark">*</span>
+                    </label>
+                    <div class="layui-input-block line_body_1" style="width: 150px; margin-left: 130px">
+                        <select name="expect_hosp" lay-filter="aihao">
+                            <option value="3">四川大学华西医院</option>
+                            <option value="4">四川省人民医院</option>
+                            <option value="4">四川省肿瘤医院</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline" name="hosp_area">
+                    <label class="layui-form-label line_name" style="width: 100px">
+                        <span>&nbsp;&nbsp;&nbsp;院区: </span><span name="mark">*</span>
+                    </label>
+                    <div class="layui-input-block" style="width: 150px">
+                        <select name="courtyard" lay-filter="aihao">
+                            <option value="3">东院区</option>
+                            <option value="4">西院区</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name" style="width: 130px">
+                        <span>联系方式:  </span><span name="mark">*</span>
+                    </label>
+                    <div class="layui-input-inline line_body_1">
+                        <input type="text" name="name" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name" style="width: 100px">
+                        <span>所在单位:  </span><span name="mark"></span>
+                    </label>
+                    <div class="layui-input-inline line_body_2" >
+                        <input type="text" name="idcard" class="layui-input" disabled>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+
+<!--减少用户弹窗-->
+<script type="text/html" id="examworkfillinpersonedit_dellperson_layer">
+    <div id="examworkfillinpersonadd_dellperson_center">
+        <br/>
+        <form class="layui-form">
+            <div class="layui-form-item" style="margin-left: 10px; margin-right: 10px;">
+                <textarea name="" required lay-verify="required" placeholder="请输入移出原因" class="layui-textarea"></textarea>
+            </div>
+        </form>
+    </div>
+</script>
+
+<!--确认管理员弹窗-->
+<script type="text/html" id="examworkfillinpersonedit_confirmmanage_layer">
+    <div id="examworkfillinpersonadd_confirmmanage_center">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name" style="width: 100px">
+                        <span>机构性质: </span>
+                    </label>
+                    <div class="layui-input-inline" style="margin-top: 8px">
+                        <span>参建单位</span>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name">
+                        <span>邮编：</span>
+                    </label>
+                    <div class="layui-input-inline" style="width: 150px">
+                        <input type="text" name="title"  placeholder="请输入邮编" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label line_name">
+                        <span>地址：</span>
+                    </label>
+                    <div class="layui-input-inline" style="width: 250px">
+                        <input type="text" name="title"  placeholder="请输入地址" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-col-md12">
+                    <div class="layui-col-md2" style="text-align: center">在职</div>
+                    <div class="layui-col-md8">
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 100px">管理人员</label>
+                    <div class="layui-input-inline" style="width: 100px;">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 100px;">联系电话</label>
+                    <div class="layui-input-inline" style="width: 180px">
+                        <input type="text" name="date" id="date" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 100px">分管领导</label>
+                    <div class="layui-input-inline" style="width: 100px">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 100px">联系电话</label>
+                    <div class="layui-input-inline" style="width: 180px">
+                        <input type="text" name="date"  lay-verify="date" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-col-md12">
+                    <div class="layui-col-md2" style="text-align: center">离退</div>
+                    <div class="layui-col-md8">
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 100px;">管理人员</label>
+                    <div class="layui-input-inline" style="width: 100px">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 100px">联系电话</label>
+                    <div class="layui-input-inline" style="width: 180px">
+                        <input type="text" name="date"  lay-verify="date" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 100px">分管领导</label>
+                    <div class="layui-input-inline" style="width: 100px">
+                        <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label" style="width: 100px">联系电话</label>
+                    <div class="layui-input-inline" style="width: 180px">
+                        <input type="text" name="date"  lay-verify="date" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
+
+<script>
+    layui.use('examwork/fillin_person_edit', layui.factory('examwork/fillin_person_edit'));
+</script>
+
+
+

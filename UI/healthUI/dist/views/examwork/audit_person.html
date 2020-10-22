@@ -1,0 +1,82 @@
+<!--审核人员名单-->
+<div class="layui-fluid" id="examwork_auditperson">
+    <div class="layui-card">
+        <div class="layui-card-body">
+            <div class="layui-form layui-form-pane health-query">
+                <!-- 功能菜单区域-->
+                <div class="layui-form-item">
+                    <div class="layui-col-md10">
+                        <label class="layui-form-label">体检批次</label>
+                        <div class="layui-col-md3">
+                        <select name="city" lay-verify="">
+                            <option value="">请选择一个批次</option>
+                            <option value="010">2019春季</option>
+                            <option value="021">2020春季</option>
+                        </select>
+                        </div>
+                        <label class="layui-form-label">参检单位</label>
+                        <div class="layui-col-md3">
+                            <select name="city" lay-verify="" lay-search>
+                                <option value="">请选择单位</option>
+                                <option value="010">单位a</option>
+                                <option value="021">单位b</option>
+                                <option value="0571">单位c</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="layui-form-item">
+                    <button type="button" class="layui-btn" lay-filter="hyd-query" name="query">
+                        <i class="layui-icon layui-icon-search">查询</i>
+                    </button>
+                    <button type="button" class="layui-btn" lay-filter="hyd-query" name="audit">
+                        <i class="layui-icon layui-icon-add-circle">批量审核人员名单</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card health-toolbar">
+        <div class="health-filter health-filter-input">
+            <input type="text" name="health-search"  placeholder="过滤"/>
+        </div>
+    </div>
+    <div class="layui-card health-table-default">
+        <table lay-size="sm" class="layui-table" id="auditpersontable" lay-filter="auditpersontable"></table>
+    </div>
+</div>
+
+<!--  查看 编辑 停用 启用 按钮-->
+<script type="text/html" id="auditpersontable_bolder">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="query_audit">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit_audit">编辑</a>
+    {{#  if(d.status = "1"){ }}
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="stop_audit">停用</a>
+    {{#  } }}
+    {{#  if(d.status = "-1"){ }}
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="start_audit">启用</a>
+    {{#  } }}
+</script>
+
+<!--批量审核人员名单弹窗-->
+<script type="text/html" id="batchcheck_layer">
+    <div class="layui-col-md12" style="height: 200px; width: 450px">
+        <div class="layui-card health-table-default">
+            <table lay-size="sm" class="layui-table" id="batchcheck_successtable" lay-filter="batchcheck_successtable"></table>
+        </div>
+    </div>
+    <br/>
+    <div class="layui-col-md12" style="height: 200px; width: 450px">
+        <div class="layui-card health-table-default">
+            <table lay-size="sm" class="layui-table" id="batchcheck_failuretable" lay-filter="batchcheck_failuretable"></table>
+        </div>
+    </div>
+</script>
+
+<script>
+    layui.use('examwork/audit_person', layui.factory('examwork/audit_person'));
+</script>
+
+
+

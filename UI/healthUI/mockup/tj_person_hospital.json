@@ -1,0 +1,25 @@
+{
+	"code": "1",
+	"data": [
+        {"quotaname":"四川省人民医院",
+            "planAll":1254,"factAll":1173,"percentAll":93.54,
+            "planProvince":413,"factProvince":333,"percentProvince":80.62,
+            "planCity":841,"factCity":840,"percentCity":99.88
+        },
+        {"quotaname":"四川大学华西医院",
+            "planAll":2163,"factAll":1592,"percentAll":73.60,
+            "planProvince":677,"factProvince":552,"percentProvince":81.53,
+            "planCity":1486,"factCity":1040,"percentCity":69.88
+        },
+        {"quotaname":"四川省肿瘤医院",
+            "planAll":723,"factAll":377,"percentAll":52.14,
+            "planProvince":233,"factProvince":117,"percentProvince":50.21,
+            "planCity":490,"factCity":260,"percentCity":53.06
+        },
+        {"quotaname":"合计",
+            "planAll":4140,"factAll":3142,"percentAll":75.89,
+            "planProvince":1323,"factProvince":1002,"percentProvince":75.73,
+            "planCity":2817,"factCity":2140,"percentCity":75.96
+        }
+    ]
+}

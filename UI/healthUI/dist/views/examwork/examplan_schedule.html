@@ -1,0 +1,25 @@
+<!--安排体检日程-->
+<div class="layui-fluid" id="examplan_schedule">
+    <div class="layui-card">
+        <div class="layui-col-md12">
+            <div class="layui-col-md8">
+                <div class="health-toolbar">
+                    <div class="layui-form-item">
+                    </div>
+                    <div class="health-filter health-filter-input">
+                        <input type="text" name="health-search"  placeholder="过滤"/>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="layui-btn layui-btn-normal" id="examplan_schedule_add" style="text-align: center; margin-top: 10px">安排体检日程</div>
+            </div>
+        </div>
+        <div class="health-table-default">
+            <table lay-size="sm" class="layui-table" id="examplan_schedule_table" lay-filter="examplan_schedule_table"></table>
+        </div>
+    </div>
+</div>
+<script>
+    layui.use('examwork/examplan_schedule', layui.factory('examwork/examplan_schedule'));
+</script>

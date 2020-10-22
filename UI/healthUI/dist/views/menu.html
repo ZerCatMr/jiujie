@@ -1,0 +1,167 @@
+<script type="text/html" template id="TPL_layout">
+    <div class="layui-logo" lay-href="">
+        <span id="hyd_user_info">{{ layui.setter.name || 'layuiAdmin' }}</span>
+    </div>
+    <div class="layui-tab layui-tab-brief" style="margin-top:50px;" lay-filter="TabBrief">
+        <div class="layui-tab-content" style="padding: 0px;">
+            <ul class="layui-nav layui-nav-tree" style="margin-top: 0px;"
+                lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+
+            </ul>
+        </div>
+    </div>
+</script>
+<script>
+    layui.define(function (exports) {
+
+        layui.use(['laydate', 'table', 'element', 'hdk', 'form', 'admin', 'hydLayer', 'element', 'appconfig'], function () {
+            var $ = layui.$
+                , laydate = layui.laydate
+                , router = layui.router()
+                , table = layui.table
+                , setter = layui.setter
+                , form = layui.form
+                , element = layui.element
+                , hdk = layui.hdk
+                , admin = layui.admin
+                , hydLayer = layui.hydLayer
+                , appconfig = layui.appconfig;
+            //JQuery获取URL参数
+            // function getQueryVariable(variable){
+            //     debugger
+            //     var query = window.location.search.substring(1);
+            //     var vars = query.split("&");
+            //     for (var i=0;i<vars.length;i++) {
+            //         var pair = vars[i].split("=");
+            //         if(pair[0] === variable){return pair[1];}
+            //     }
+            //     return(false);
+            // }
+            // var st = window.location.search.substring(1).split("&")[0].substring(window.location.search.substring(1).split("&")[0], window.location.search.substring(1).split("&")[0].length);
+
+
+
+            //添加侧边菜单
+            function loadMenu (roleIndex) {
+                roleIndex === false?roleIndex=0:roleIndex=roleIndex;
+                //获取缓存
+                var loginData = JSON.parse(sessionStorage.getItem("health-login-cache"));
+                var menuData = loginData.roleDOList[roleIndex].menuVOS;
+
+
+                //遍历进行第一次添加
+                $.each(menuData, function (index, value) {
+
+                    //获取当前索引在缓存中的数据
+                    var data = menuData[index];
+                    //父菜单属性
+                    var parentCd = data.id;
+                    var parentName = data.name;
+                    var parentList = data.menuList;
+
+                    var countDD = '';
+
+                    //遍历获取当前子菜单属性
+                    $.each(parentList, function (ins, vas) {
+
+                        var sonData = parentList[ins];
+                        //子菜单属性
+                        var sonCd = sonData.id;
+                        var sonName = sonData.name;
+                        var menStc = sonData.menuSrc;
+                        var href = menStc+'/title='+sonName;
+                        //设置子菜单div（添加在父菜单DL中）
+                        var sonA = ' <dd><a  href="javascript:;"  class="hyd-a-hover" lay-href="'+ href +'">'+sonName+'</a></dd>';
+                        var sonDD = '<dd data-name="'+sonName+'" data-jump="'+sonCd+'" class="">'+sonA+'</dd>';
+                        //添加总的DD
+                        countDD += sonDD;
+                    });
+                    //设置父菜单div
+                    var  parentA = '<a  href="javascript:;"  lay-tips="' + parentName + '" lay-direction="2" class="hyd-a-hover">' +
+                                    '  <i class="iconfont icon-jigouguanliicon_"></i>' +
+                                    '  <cite>' + parentName + '</cite>' +
+                                    //侧边菜单角标
+                                    '  <span class="layui-nav-more">' +
+                                    '  </span>' +
+                                   '</a>';
+                    var parentDI = '<dl class="layui-nav-child">'+countDD+'</dl>';
+                    //添加总的LI
+                    countLI = parentA + parentDI;
+                    var parentLI= '<li data-name="'+parentName+'" class="layui-nav-item" data-jump="'+parentCd+'">'+countLI+'</li>';
+                    //为UL 添加LI
+                    $("#LAY-system-side-menu").append(parentLI);
+                });
+                //为UL 添加span
+                $("#LAY-system-side-menu").append('<span class="layui-nav-bar" style="top: 178.5px; height: 0px; opacity: 0;"></span>');
+            }
+            loadMenu(getQueryVariable("roleIndex"));
+
+            //侧边菜单的展开与缩放
+            element.init();
+
+
+            //健康个案信息页面(发送ajax请求加载所有单位信息)
+            $('[lay-href="patrol/pat_health_info/title=健康个案信息"]').click(function () {
+                var data = layui.data('health').organ;
+                if (data == null) {
+                    //发送ajax请求查询所有机构信息
+                    $.ajax({
+                        url: appconfig.Patrol.QueryMenu
+                        , type: 'get'
+                        , dataType: 'json'
+                        , success: function (result) {
+                            //将数据添加到layui.data中
+                            layui.data('health', {
+                                key: 'organ'
+                                //data中包含以下内容 token role menus years
+                                , value: result.data
+                            });
+                        }
+                    });
+                }
+            })
+
+            //健康档案授权页面(发送ajax请求加载所有已授权用户信息)
+            $('[lay-href="document/auth/title=健康档案授权"]').click(function () {
+                var data = layui.data('health').archivesUserNames;
+                if (data == null) {
+                    $.ajax({
+                        url: appconfig.Menu.AuthUsers
+                        , type: 'get'
+                        , dataType: 'json'
+                        , success: function (result) {
+                            //将数据添加到layui.data中
+                            layui.data('health', {
+                                key: 'archivesUserNames'
+                                , value: result.data
+                            });
+                        }
+                    })
+                }
+            });
+            //管理健康档案
+            $('[lay-href="document/manage/title=管理健康档案"]').click(function () {
+                var data = layui.data('health').archivesUserNames;
+                if (data == null) {
+                    $.ajax({
+                        url: appconfig.Menu.AuthUsers
+                        , type: 'get'
+                        , dataType: 'json'
+                        , success: function (result) {
+                            //将数据添加到layui.data中
+                            layui.data('health', {
+                                key: 'archivesUserNames'
+                                , value: result.data
+                            });
+                        }
+                    })
+                }
+            });
+            //查看健康档案
+            $('[lay-href="document/view/title=查看健康档案"]').click(function () {})
+
+        });
+        exports('menu', {})
+    });
+</script>
+

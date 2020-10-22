@@ -1,0 +1,34 @@
+{
+  "code":0,
+  "message":"ssuccess",
+  "data":[
+    {
+      "loginaccount": "登录账号",
+      "gendercode":"Sex1",
+      "name":"姓名",
+      "phone":"手机号",
+      "officephone":"座机号",
+      "usertypename": "人员类型",
+      "status": "账号状态"
+    },
+    {
+      "loginaccount": "xxx111",
+      "gendercode":"Sex1",
+      "name":"李xx",
+      "phone":"13700000000",
+      "officephone":"5280000",
+      "usertypename": "456",
+      "status": "0"
+    },
+    {
+      "loginaccount": "xxx222",
+      "gendercode":"Sex2",
+      "name":"吴xx",
+      "phone":"13500000000",
+      "officephone":"5380000",
+      "usertypename": "123",
+      "status": "1"
+    }
+  ]
+
+}

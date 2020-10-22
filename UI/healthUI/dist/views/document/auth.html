@@ -1,0 +1,125 @@
+<div style="padding: 20px; background-color: #F2F2F2;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">授权用户</div>
+                <div class="layui-card">
+                    <div class="layui-card-body">
+                        <div class="layui-form layui-form-pane health-query">
+                            <div class="layui-form-item">
+                                <div class="layui-col-md10">
+                                    <div class="multi-checkbox" hyd-name="quotaname">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">
+                    <div class="layui-col-md1">当前授权情况</div>
+                    <div class="layui-col-md4">
+                        <span id="hyd-authlevel-user"></span>
+                        <button type="button" class="layui-btn layui-btn-sm layui-btn-disabled" id="hyd_auth_modifyAuth">修改权限</button>
+                        <button type="button" class="layui-btn layui-btn-sm layui-btn-disabled" id="hyd_auth_remove">移除权限</button>
+                    </div>
+                </div>
+                <div class="layui-card-body">
+                    <!-- 表格内容 -->
+                    <div class="layui-card health-table-default">
+                        <div class="layui-form layui-form-pane health-query">
+                            <div class="layui-form-item">
+                                <div class="layui-col-md3">
+                                    <label class="layui-form-label">授权级别</label>
+                                    <label class="layui-form-label hyd-label-view" id="hyd_auth_levName"><div></div></label>
+                                </div>
+                                <div class="layui-col-md3">
+                                    <label class="layui-form-label">授权类型</label>
+                                    <label class="layui-form-label hyd-label-view" id="hyd_auth_authtype"><div></div></label>
+                                </div>
+                                <div class="layui-col-md3">
+                                    <label class="layui-form-label">生效日期</label>
+                                    <label class="layui-form-label hyd-label-view" id="hyd_auth_startDate"><div></div></label>
+                                </div>
+                                <div class="layui-col-md3">
+                                    <label class="layui-form-label">过期日期</label>
+                                    <label class="layui-form-label hyd-label-view" id="hyd_auth_expireDate"><div></div></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md12">
+            <div class="patrol-card layui-card" id="demand-search-re">
+                <div class="patrol-card-header layui-card-header mt-10">授权历史</div>
+                <div class="patrol-table-view health-table-default">
+                    <table class="layui-hide" lay-filter="hyd_ahtu_record" id="hyd_ahtu_record"></table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="a">
+    <div class="layui-card-body">
+        <div class="layui-col-md12">
+            <form class="layui-form layui-form-pane health-query" id="a_form">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="username"  disabled  autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">授权范围</label>
+                    <div class="multi-checkbox" name="levNam">
+                        <div><span hyd-value="0">厅级</span></div>
+                        <div><span hyd-value="1">省级</span></div>
+                        <div><span hyd-value="3">全部</span></div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">授权时间</label>
+                    <div class="multi-checkbox" name="authDate">
+                        <div><span hyd-value="0">永久有效</span></div>
+                        <div><span hyd-value="1">限时到期</span></div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">开始时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="startDate"  id="a_startDate"  autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item" style="visibility:visible" name="auth_endTime">
+                    <label class="layui-form-label">结束时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="expirtDate"  id="a_expirtDate"  autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <br/>
+                <br/>
+                <br/>
+
+                <div class="layui-form-item">
+                    <div class="layui-layer-btn layui-layer-btn-">
+                        <a class="layui-layer-addVisitVisit" id="hyd_auth_sumbit">确定</a>
+                        <a class="layui-layer-btn1" name="hyd_auth_colse">取消</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</script>
+<script>
+    layui.use('document/auth', layui.factory('document/auth'));
+</script>
+
+

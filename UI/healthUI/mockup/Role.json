@@ -1,0 +1,284 @@
+{
+  "code": "200",
+  "data":{
+      "loginAccount": "wst006",
+      "userName": "张智慧",
+      "roleDOList": [
+        {
+          "roleid": "examadmin",
+          "roleName": "干保办体检管理员",
+          "roleCode": "3",
+          "status": "1",
+          "creaTime": "2020-07-20 14:54:04",
+          "lastModTime": "2020-07-21 14:48:07",
+          "menuVOS": [
+            {
+              "id": "EXA00",
+              "name": "干保办体检工作",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "EXA07",
+                  "name": "年度体检名单",
+                  "menuSrc": "examwork/year_examperson",
+                  "parentId": "EXA00",
+                  "menuList": null
+                }
+              ]
+            },
+            {
+              "id": "DOC00",
+              "name": "档案管理",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "DOC03",
+                  "name": "查看健康档案",
+                  "menuSrc": "document/view",
+                  "parentId": "DOC00",
+                  "menuList": null
+                }
+              ]
+            },
+            {
+              "id": "RPT00",
+              "name": "统计分析",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "RPT01",
+                  "name": "体检信息统计",
+                  "menuSrc": "report/personnum",
+                  "parentId": "RPT00",
+                  "menuList": null
+                },
+                {
+                  "id": "RPT02",
+                  "name": "体检疾病统计",
+                  "menuSrc": "report/illnum",
+                  "parentId": "RPT00",
+                  "menuList": null
+                },
+                {
+                  "id": "RPT03",
+                  "name": "体检疾病查询",
+                  "menuSrc": "report/illquery",
+                  "parentId": "RPT00",
+                  "menuList": null
+                }
+              ]
+            },
+            {
+              "id": "SET00",
+              "name": "体检设置",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "SET01",
+                  "name": "体检项目维护",
+                  "menuSrc": "examset/project_maintain",
+                  "parentId": "SET00",
+                  "menuList": null
+                },
+                {
+                  "id": "SET02",
+                  "name": "体检疾病维护",
+                  "menuSrc": "examset/disease_maintain",
+                  "parentId": "SET00",
+                  "menuList": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "roleid": "examadmin",
+          "roleName": "干保办体检管理员1",
+          "roleCode": "3",
+          "status": "1",
+          "creaTime": "2020-07-20 14:54:04",
+          "lastModTime": "2020-07-21 14:48:07",
+          "menuVOS": [
+            {
+              "id": "EXA00",
+              "name": "干保办体检工作",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "EXA07",
+                  "name": "年度体检名单",
+                  "menuSrc": "examwork/year_examperson",
+                  "parentId": "EXA00",
+                  "menuList": null
+                }
+              ]
+            },
+            {
+              "id": "DOC00",
+              "name": "档案管理",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "DOC03",
+                  "name": "查看健康档案",
+                  "menuSrc": "document/view",
+                  "parentId": "DOC00",
+                  "menuList": null
+                }
+              ]
+            },
+            {
+              "id": "RPT00",
+              "name": "统计分析",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "RPT01",
+                  "name": "体检信息统计",
+                  "menuSrc": "report/personnum",
+                  "parentId": "RPT00",
+                  "menuList": null
+                },
+                {
+                  "id": "RPT02",
+                  "name": "体检疾病统计",
+                  "menuSrc": "report/illnum",
+                  "parentId": "RPT00",
+                  "menuList": null
+                },
+                {
+                  "id": "RPT03",
+                  "name": "体检疾病查询",
+                  "menuSrc": "report/illquery",
+                  "parentId": "RPT00",
+                  "menuList": null
+                }
+              ]
+            },
+            {
+              "id": "SET00",
+              "name": "体检设置",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "SET01",
+                  "name": "体检项目维护",
+                  "menuSrc": "examset/project_maintain",
+                  "parentId": "SET00",
+                  "menuList": null
+                },
+                {
+                  "id": "SET02",
+                  "name": "体检疾病维护",
+                  "menuSrc": "examset/disease_maintain",
+                  "parentId": "SET00",
+                  "menuList": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "roleid": "examadmin",
+          "roleName": "干保办体检管理员2",
+          "roleCode": "3",
+          "status": "1",
+          "creaTime": "2020-07-20 14:54:04",
+          "lastModTime": "2020-07-21 14:48:07",
+          "menuVOS": [
+            {
+              "id": "EXA00",
+              "name": "干保办体检工作",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "EXA07",
+                  "name": "年度体检名单",
+                  "menuSrc": "examwork/year_examperson",
+                  "parentId": "EXA00",
+                  "menuList": null
+                }
+              ]
+            },
+            {
+              "id": "DOC00",
+              "name": "档案管理",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "DOC03",
+                  "name": "查看健康档案",
+                  "menuSrc": "document/view",
+                  "parentId": "DOC00",
+                  "menuList": null
+                }
+              ]
+            },
+            {
+              "id": "RPT00",
+              "name": "统计分析",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "RPT01",
+                  "name": "体检信息统计",
+                  "menuSrc": "report/personnum",
+                  "parentId": "RPT00",
+                  "menuList": null
+                },
+                {
+                  "id": "RPT02",
+                  "name": "体检疾病统计",
+                  "menuSrc": "report/illnum",
+                  "parentId": "RPT00",
+                  "menuList": null
+                },
+                {
+                  "id": "RPT03",
+                  "name": "体检疾病查询",
+                  "menuSrc": "report/illquery",
+                  "parentId": "RPT00",
+                  "menuList": null
+                }
+              ]
+            },
+            {
+              "id": "SET00",
+              "name": "体检设置",
+              "menuSrc": "",
+              "parentId": null,
+              "menuList": [
+                {
+                  "id": "SET01",
+                  "name": "体检项目维护",
+                  "menuSrc": "examset/project_maintain",
+                  "parentId": "SET00",
+                  "menuList": null
+                },
+                {
+                  "id": "SET02",
+                  "name": "体检疾病维护",
+                  "menuSrc": "examset/disease_maintain",
+                  "parentId": "SET00",
+                  "menuList": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ,
+	"msg": "登录成功"
+}

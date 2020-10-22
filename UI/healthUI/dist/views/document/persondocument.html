@@ -1,0 +1,142 @@
+<div class="layui-btn layui-btn-primary layui-btn-radius " id="query_per_doc">档案信息</div>
+<!-- 原背景色 #0E5638 -->
+<div style="padding: 20px; background-color: rgb(199,237,204); width: 100%; height: 100%; overflow: auto">
+    <div class="persound_layui_fluid layui-fluid">
+        <div class="layui-card">
+            <div id="per_doc_cardBody" class="layui-card-body" style="display:none">
+                <div class="layui-form layui-form-pane health-query">
+                    <div class="layui-form-item">
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">姓名</label>
+                            <label class="layui-form-label hyd-label-view" name="userName"></label>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">性别</label>
+                            <label class="layui-form-label hyd-label-view" name="genderCd"></label>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">出生日期</label>
+                            <label class="layui-form-label hyd-label-view" name="birthDay"></label>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">身份证号</label>
+                            <label class="layui-form-label hyd-label-view" name="identId"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">人员类型</label>
+                            <label class="layui-form-label hyd-label-view" name="typeName"></label>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">人员级别</label>
+                            <label class="layui-form-label hyd-label-view" name="levelName"></label>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">医疗待遇</label>
+                            <label class="layui-form-label hyd-label-view" name="medTreatName"></label>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">手机号码</label>
+                            <label class="layui-form-label hyd-label-view" name="phone"></label>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">参检单位</label>
+                            <label class="layui-form-label hyd-label-view" name="examOrganName"></label>
+                        </div>
+                        <div class="layui-col-md3">
+                            <label class="layui-form-label">职务</label>
+                            <label class="layui-form-label hyd-label-view" name="duty"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row layui-col-space15" id="doc_Report_All">
+    </div>
+</div>
+<script>
+layui.use('document/persondocument', layui.factory('document/persondocument'));
+</script>
+<style>
+    .nodoc_tips{
+        margin-left: 22px;
+    }
+    .persound_layui_fluid{
+        margin-left: 7px;
+        margin-right: 70px;
+    }
+    .per_col{
+        width: 290px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .per_header{
+        height: 80px;
+        background-color: #14BE7A;
+    }
+    .per_center{
+        height: 230px;
+        background-color: #FFFFFF;
+    }
+    .per_tail{
+        background-color:#FF6A00;
+        height: 35px;
+        cursor:pointer
+    }
+    .per_tail:hover{
+        background-color: #FE7651;
+    }
+    .per_hospNam{
+        padding-top:10px;
+    }
+    .per_data{
+        padding-bottom: 10px;
+    }
+    .per_hospNam font{
+        margin-left: 20px;
+        font-weight:bolder;
+        font-family: 微软雅黑;
+        font-size: 25px;
+        color: white;
+    }
+    .lin_userName{
+        margin-left: 20px;
+        font-weight:bolder;
+        font-family: 微软雅黑;
+    }
+    .per_data font{
+        margin-left: 20px;
+        font-weight:bolder;
+        font-family: 微软雅黑;
+        font-size: 20px;
+        color: white;
+    }
+    .per_btn{
+        padding-top: 1px;
+        font-family: 微软雅黑;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        line-height: 35px;
+    }
+    .center_lin span{
+        margin-left: 20px;
+        margin-top: 20px;
+        font-family: 微软雅黑;
+        font-size: 18px;
+    }
+    #query_per_doc{
+        position: fixed;
+        bottom: 85%;
+        right: 5%;
+        z-index: 999;
+        box-shadow: 2px 2px 2px #888888;
+    }
+</style>
+
+
+

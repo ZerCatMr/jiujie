@@ -1,0 +1,130 @@
+{
+	"code": 0,
+	"msg": "查询成功",
+	"count": 1000,
+	"data": [{
+		"id": 1000001,
+		"name": "心脏病",
+		"cateid":1,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000002,
+		"name": "关节炎",
+		"cateid":2,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000003,
+		"name": "肺炎",
+		"cateid":3,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000004,
+		"name": "软骨病",
+		"cateid":4,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000005,
+		"name": "夜盲症",
+		"cateid":5,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000006,
+		"name": "口腔溃烂",
+		"cateid":6,
+		"status": 1,
+		"score": 79
+	},{
+		"id": 1000001,
+		"name": "心脏病",
+		"cateid":1,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000002,
+		"name": "关节炎",
+		"cateid":2,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000003,
+		"name": "肺炎",
+		"cateid":3,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000004,
+		"name": "软骨病",
+		"cateid":4,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000005,
+		"name": "夜盲症",
+		"cateid":5,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000006,
+		"name": "口腔溃烂",
+		"cateid":6,
+		"status": 1,
+		"score": 79
+	},{
+		"id": 1000001,
+		"name": "心脏病",
+		"cateid":1,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000002,
+		"name": "关节炎",
+		"cateid":2,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000003,
+		"name": "肺炎",
+		"cateid":3,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000004,
+		"name": "软骨病",
+		"cateid":4,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000005,
+		"name": "夜盲症",
+		"cateid":5,
+		"status": 1,
+		"score": 79
+	},
+	{
+		"id": 1000006,
+		"name": "口腔溃烂",
+		"cateid":6,
+		"status": 1,
+		"score": 79
+	}]
+
+}
